@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15181D">
-<title>MR.SHOP — Boutique en ligne Maroc | Tout sous un même toit</title>
-<meta name="description" content="MR.SHOP — Votre boutique en ligne au Maroc. Électronique, Mode, Maison, Beauté & Sport. Livraison partout au Maroc et Paiement à la livraison.">
+<title>MR.SHOP.MA — The Best Quality of Product is Here</title>
+<meta name="description" content="MR.SHOP.MA — Produits de haute qualité au Maroc. Livraison Gratuite partout au Maroc et Paiement à la livraison.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,15 +40,15 @@ h1, h2, h3, h4 { font-family: 'Big Shoulders Display', sans-serif; text-transfor
 .eyebrow { font: 600 .75rem 'IBM Plex Mono'; letter-spacing: .15em; text-transform: uppercase; color: var(--brass); display: inline-block; margin-bottom: 8px; }
 
 /* Announcement Bar */
-.announce { background: var(--ink); color: var(--paper); padding: 10px 15px; text-align: center; font: 500 .78rem 'IBM Plex Mono'; position: relative; letter-spacing: 0.02em; }
-.announce b { color: var(--brass2); }
+.announce { background: var(--ink); color: var(--paper); padding: 11px 15px; text-align: center; font: 600 .82rem 'IBM Plex Mono'; position: relative; letter-spacing: 0.03em; }
+.announce b { color: #25D366; text-transform: uppercase; }
 .announce button { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: none; border: 0; color: white; font-size: 18px; opacity: 0.7; }
 .announce button:hover { opacity: 1; }
 
 /* Header */
 header { position: sticky; top: 0; z-index: 100; background: rgba(248, 249, 245, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 header .wrap { height: 76px; display: flex; align-items: center; justify-content: space-between; }
-.logo { font: 900 1.85rem 'Big Shoulders Display'; letter-spacing: -0.02em; }
+.logo { font: 900 1.9rem 'Big Shoulders Display'; letter-spacing: -0.02em; }
 .logo b { color: var(--brass); }
 nav { display: flex; gap: 28px; font-size: .95rem; font-weight: 500; }
 nav a { transition: color 0.2s; }
@@ -62,21 +62,19 @@ nav a:hover { color: var(--brass); }
 .menu-btn span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; transition: 0.2s; }
 
 /* Hero Section */
-.hero { padding: 80px 0 70px; background: radial-gradient(var(--brass-light) 1.2px, transparent 1.2px); background-size: 24px 24px; border-bottom: 1px solid var(--line); }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--line); padding: 6px 14px; border-radius: 20px; font: 500 0.75rem 'IBM Plex Mono'; margin-bottom: 20px; }
+.hero { padding: 75px 0 65px; background: radial-gradient(var(--brass-light) 1.2px, transparent 1.2px); background-size: 24px 24px; border-bottom: 1px solid var(--line); }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--line); padding: 6px 14px; border-radius: 20px; font: 600 0.78rem 'IBM Plex Mono'; margin-bottom: 20px; color: var(--brass); }
 .hero-badge .dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; display: inline-block; }
-.hero h1 { font-size: clamp(3.5rem, 8.5vw, 6.8rem); max-width: 900px; margin: 10px 0 20px; color: var(--ink); }
+.hero h1 { font-size: clamp(2.8rem, 7.5vw, 5.8rem); max-width: 950px; margin: 10px 0 20px; color: var(--ink); letter-spacing: -0.01em; }
 .hero h1 em { color: var(--brass); font-style: normal; position: relative; display: inline-block; }
 .hero h1 em::after { content: ''; position: absolute; bottom: 8px; left: 0; width: 100%; height: 8px; background: var(--brass-light); z-index: -1; }
-.lead { max-width: 620px; color: var(--slate); font-size: 1.15rem; line-height: 1.6; margin-bottom: 35px; }
+.lead { max-width: 640px; color: var(--slate); font-size: 1.15rem; line-height: 1.6; margin-bottom: 35px; }
 .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 .btn { border: 1px solid var(--ink); padding: 14px 26px; font-weight: 700; border-radius: var(--radius); transition: all 0.25s; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.95rem; }
 .btn.primary { background: var(--ink); color: var(--paper); }
 .btn.primary:hover { background: #2b303a; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
 .btn.wa-btn { background: var(--green); color: white; border-color: var(--green); }
 .btn.wa-btn:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(37,211,102,0.3); }
-.btn.secondary { background: white; color: var(--ink); }
-.btn.secondary:hover { background: var(--paper); transform: translateY(-2px); }
 
 /* Directory / Categories */
 section { padding: 80px 0; }
@@ -84,45 +82,32 @@ section { padding: 80px 0; }
 .head h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 8px 0 12px; }
 .head p { color: var(--slate); line-height: 1.6; margin: 0; font-size: 1.05rem; }
 
-.directory { border-top: 1px solid var(--line); }
-.cat-filter-tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; margin-bottom: 30px; scrollbar-width: none; }
-.cat-filter-tabs::-webkit-scrollbar { display: none; }
-.tab-btn { padding: 10px 20px; background: white; border: 1px solid var(--line); border-radius: 30px; font: 600 0.85rem 'IBM Plex Mono'; white-space: nowrap; transition: 0.2s; }
-.tab-btn.active, .tab-btn:hover { background: var(--ink); color: white; border-color: var(--ink); }
-
-.row { display: flex; align-items: center; gap: 20px; padding: 22px 12px; border-top: 1px solid var(--line); transition: all 0.25s; cursor: pointer; }
-.row:hover { background: white; padding-left: 20px; box-shadow: var(--shadow); border-radius: var(--radius); border-top-color: transparent; }
-.num { font: 800 1.6rem 'Big Shoulders Display'; color: var(--brass); width: 40px; }
-.chip { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
-.name { font-weight: 700; font-size: 1.1rem; flex: 1; }
-.desc { color: var(--slate); font: 400 .85rem 'IBM Plex Mono'; flex: 1.5; }
-.arrow { font-size: 20px; transition: transform 0.2s; }
-.row:hover .arrow { transform: translateX(6px); color: var(--brass); }
-
 /* Products Grid */
 .products-section { background: var(--ink); color: var(--paper); }
 .products-section .head p { color: #aaa; }
 .products-section .eyebrow { color: var(--brass2); }
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.card { border: 1px solid rgba(255,255,255,0.1); background: #1f232b; border-radius: var(--radius); overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
+.card { border: 1px solid rgba(255,255,255,0.12); background: #1f232b; border-radius: var(--radius); overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
 .card:hover { transform: translateY(-6px); border-color: var(--brass2); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
 .media { aspect-ratio: 1/1; position: relative; overflow: hidden; background: #2a2f3a; }
 .media img { height: 100%; transition: transform 0.5s ease; }
 .card:hover .media img { transform: scale(1.08); }
 .tag { position: absolute; left: 12px; top: 12px; background: var(--red); color: white; padding: 4px 9px; font: 700 0.65rem 'IBM Plex Mono'; border-radius: 3px; z-index: 2; text-transform: uppercase; }
-.tag.discount { background: var(--brass); }
 .body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
 .cat { font: 500 .72rem 'IBM Plex Mono'; color: var(--brass2); text-transform: uppercase; letter-spacing: 0.05em; }
-.pname { font-weight: 700; font-size: 1.05rem; margin: 8px 0; color: white; line-height: 1.3; }
+.pname { font-weight: 700; font-size: 1.08rem; margin: 8px 0; color: white; line-height: 1.3; }
 .price-row { display: flex; align-items: baseline; gap: 10px; margin-top: auto; padding-top: 10px; }
-.price { font: 800 1.5rem 'Big Shoulders Display'; color: #fff; }
+.price { font: 800 1.6rem 'Big Shoulders Display'; color: #25D366; }
 .old-price { font: 500 0.9rem 'IBM Plex Mono'; color: #888; text-decoration: line-through; }
-.rating { color: #FFC107; font-size: 0.8rem; margin: 4px 0 10px; }
 .card-actions { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 14px; }
-.buy-btn { border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; padding: 11px; font-weight: 700; border-radius: var(--radius); transition: 0.2s; font-size: 0.88rem; }
-.buy-btn:hover { background: white; color: var(--ink); border-color: white; }
+.buy-btn { border: 0; background: var(--brass2); color: var(--ink); padding: 12px; font-weight: 800; border-radius: var(--radius); transition: 0.2s; font-size: 0.88rem; text-transform: uppercase; }
+.buy-btn:hover { background: white; color: var(--ink); }
 .wa-direct-btn { background: rgba(37, 211, 102, 0.15); border: 1px solid var(--green); color: var(--green); padding: 0 12px; border-radius: var(--radius); display: grid; place-items: center; transition: 0.2s; }
 .wa-direct-btn:hover { background: var(--green); color: white; }
+
+/* Empty State */
+.no-products { grid-column: 1/-1; text-align: center; padding: 60px 20px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; color: #888; }
+.no-products h3 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
 
 /* Trust Features */
 .trustgrid { display: grid; grid-template-columns: repeat(4, 1fr); background: white; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
@@ -138,7 +123,6 @@ section { padding: 80px 0; }
 .news form { display: flex; max-width: 520px; margin: 28px auto 0; gap: 8px; }
 .news input { flex: 1; padding: 15px 18px; border: 1px solid var(--ink); background: white; outline: none; border-radius: var(--radius); }
 .news button { padding: 15px 24px; background: var(--ink); color: white; border: 0; font-weight: 700; border-radius: var(--radius); transition: 0.2s; }
-.news button:hover { background: #2c313a; }
 
 /* Footer */
 footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0.9rem; }
@@ -150,7 +134,7 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
 .bottom { display: flex; justify-content: space-between; padding-top: 25px; font-size: .82rem; color: #777; }
 
 /* Drawer Cart & Modals */
-.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); z-index: 150; display: none; opacity: 0; transition: opacity 0.3s; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 150; display: none; opacity: 0; transition: opacity 0.3s; }
 .overlay.show { display: block; opacity: 1; }
 .drawer { position: absolute; right: 0; top: 0; height: 100%; width: min(460px, 100vw); background: var(--paper); padding: 28px; overflow-y: auto; display: flex; flex-direction: column; box-shadow: -10px 0 30px rgba(0,0,0,0.2); }
 .drawerhead { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
@@ -158,50 +142,29 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
 .cart-list { flex: 1; overflow-y: auto; margin: 15px 0; }
 .cartitem { display: grid; grid-template-columns: 75px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: center; }
 .cartitem img { height: 75px; border-radius: 4px; }
-.cartitem-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
-.cartitem-price { font-weight: 600; color: var(--brass); font-size: 0.9rem; }
-.qty { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
-.qty button { width: 26px; height: 26px; border: 1px solid var(--line); background: white; border-radius: 3px; font-weight: bold; }
 .summary { background: white; padding: 18px; border-radius: var(--radius); border: 1px solid var(--line); margin-top: auto; }
 .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: var(--slate); }
 .summary-row.total { font-size: 1.3rem; font-weight: 800; color: var(--ink); border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 10px; }
 .checkout-btn { width: 100%; padding: 16px; background: var(--ink); color: white; border: 0; font-weight: 800; border-radius: var(--radius); margin-top: 12px; font-size: 1rem; transition: 0.2s; }
-.checkout-btn:hover { background: #2c313b; }
 .wa-checkout-btn { width: 100%; padding: 14px; background: var(--green); color: white; border: 0; font-weight: 700; border-radius: var(--radius); margin-top: 8px; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
-.wa-checkout-btn:hover { background: var(--green-dark); }
-.empty { color: var(--slate); text-align: center; padding: 60px 0; font-size: 1.05rem; }
 
-/* Checkout Modal */
-.modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(520px, 92vw); background: white; padding: 32px; border-radius: 8px; z-index: 170; display: none; box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-height: 90vh; overflow-y: auto; }
+/* TajerCOD Style Checkout Modal */
+.modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(520px, 94vw); background: white; padding: 30px; border-radius: 8px; z-index: 170; display: none; box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-height: 92vh; overflow-y: auto; }
 .modal.show { display: block; }
-.modal-title { font-size: 2rem; margin-bottom: 6px; }
-.form-group { margin-bottom: 16px; }
-.form-group label { display: block; font: 600 0.8rem 'IBM Plex Mono'; margin-bottom: 6px; text-transform: uppercase; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); outline: none; background: var(--paper); }
-.form-group input:focus { border-color: var(--ink); background: white; }
-
-/* Search Box */
-.searchbox { position: fixed; inset: 0; background: rgba(21,24,29,0.97); z-index: 160; display: none; padding: 90px 22px; backdrop-filter: blur(8px); }
-.searchbox.show { display: block; }
-.search-container { max-width: 750px; margin: auto; }
-.searchbox input { width: 100%; padding: 20px 24px; font-size: 1.4rem; border: 2px solid var(--brass); background: #1a1d24; color: white; border-radius: var(--radius); outline: none; }
-.searchresults { margin-top: 25px; color: white; max-height: 60vh; overflow-y: auto; }
-.search-item { display: flex; align-items: center; gap: 15px; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
-.search-item:hover { background: rgba(255,255,255,0.05); }
-.search-item img { width: 50px; height: 50px; border-radius: 4px; }
+.modal-title { font-size: 1.8rem; margin-bottom: 4px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font: 600 0.78rem 'IBM Plex Mono'; margin-bottom: 5px; text-transform: uppercase; color: var(--ink); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); outline: none; background: var(--paper); font-size: 0.95rem; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--ink); background: white; }
 
 /* Floating WhatsApp Button */
 .wa-float { position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: var(--green); color: white; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 99; transition: all 0.3s; }
 .wa-float:hover { transform: scale(1.1); background: var(--green-dark); }
 .wa-float svg { width: 32px; height: 32px; fill: white; }
-.wa-tooltip { position: absolute; right: 70px; background: var(--ink); color: white; padding: 6px 12px; border-radius: 4px; font: 500 0.75rem 'IBM Plex Mono'; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.2s; }
-.wa-float:hover .wa-tooltip { opacity: 1; }
 
-/* Media Queries */
 @media (max-width: 992px) {
   .grid { grid-template-columns: repeat(3, 1fr); }
   .trustgrid { grid-template-columns: repeat(2, 1fr); }
-  .trust { border-bottom: 1px solid var(--line); }
   .footgrid { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
 
@@ -210,18 +173,13 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   nav.open { transform: translateY(0); }
   .menu-btn { display: block; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .desc { display: none; }
-  .hero h1 { font-size: 3.8rem; }
-  .news form { flex-direction: column; }
+  .hero h1 { font-size: 3.2rem; }
 }
 
 @media (max-width: 520px) {
   .grid { grid-template-columns: 1fr; }
   .trustgrid, .footgrid { grid-template-columns: 1fr; }
-  .trust { border-right: 0; }
-  .bottom { flex-direction: column; gap: 10px; text-align: center; }
-  .hero { padding: 50px 0; }
-  .card-actions { grid-template-columns: 1fr; }
+  .hero { padding: 45px 0; }
 }
 </style>
 </head>
@@ -229,24 +187,20 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
 
 <!-- Announcement Bar -->
 <div class="announce" id="announce">
-  🇲🇦 <b>Livraison Express 24h/48h</b> partout au Maroc — Paiement à la livraison disponible
+  🇲🇦 <b>LIVRAISON GRATUITE</b> PARTOUT AU MAROC — PAIEMENT À LA LIVRAISON (CASH ON DELIVERY)
   <button onclick="this.parentElement.remove()" aria-label="Fermer">×</button>
 </div>
 
 <!-- Header -->
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">MR<b>.</b>SHOP</a>
+    <a class="logo" href="#top">MR.SHOP<b>.MA</b></a>
     <nav id="nav">
-      <a href="#rayons" onclick="closeNav()">Rayons</a>
-      <a href="#nouveautes" onclick="closeNav()">Nouveautés</a>
+      <a href="#nouveautes" onclick="closeNav()">Produits</a>
       <a href="#avantages" onclick="closeNav()">Avantages</a>
       <a href="#contact" onclick="closeNav()">Contact</a>
     </nav>
     <div class="actions">
-      <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
-        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-      </button>
       <button class="icon-btn" id="cartBtn" aria-label="Panier">
         <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
         <span class="badge" id="count">0</span>
@@ -263,64 +217,16 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   <section class="hero">
     <div class="wrap">
       <div class="hero-badge">
-        <span class="dot"></span> Boutique Officielle Maroc — 100% Confiance
+        <span class="dot"></span> MR.SHOP.MA — Official Store
       </div>
-      <h1>Tout.<br>Vraiment <em>tout.</em></h1>
-      <p class="lead">Électronique, mode, maison, beauté, sport et bien plus. MR.SHOP réunit vos produits préférés avec livraison rapide et paiement cash à la réception.</p>
+      <h1>THE BEST QUALITY OF PRODUCT IS HERE <em>LIVRAISON GRATUITE</em></h1>
+      <p class="lead">Découvrez notre sélection exclusive au Maroc. Produits d'excellente qualité, livraison rapide à domicile et paiement sécurisé cash à la réception.</p>
       <div class="ctas">
-        <a class="btn primary" href="#nouveautes">Acheter maintenant</a>
-        <a class="btn wa-btn" href="https://wa.me/212668579270?text=Bonjour%20MR.SHOP,%20je%20souhaite%20me%20renseigner%20sur%20vos%20produits." target="_blank">
+        <a class="btn primary" href="#nouveautes">Voir nos produits</a>
+        <a class="btn wa-btn" href="https://wa.me/212668579270?text=Bonjour%20MR.SHOP.MA,%20je%20souhaite%20commander." target="_blank">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          Commander par WhatsApp
+          Commander sur WhatsApp
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rayons Section -->
-  <section class="directory" id="rayons">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Répertoire</span>
-        <h2>Un rayon pour chaque besoin</h2>
-        <p>Explorez nos univers soigneusement sélectionnés pour vous offrir le meilleur de chaque catégorie.</p>
-      </div>
-      <div>
-        <div class="row" onclick="filterCategory('Électronique')">
-          <span class="num">01</span>
-          <span class="chip" style="background:#2C6E68"></span>
-          <span class="name">Électronique & High-tech</span>
-          <span class="desc">Smartphones, audio, montres connectées & gaming</span>
-          <span class="arrow">→</span>
-        </div>
-        <div class="row" onclick="filterCategory('Mode')">
-          <span class="num">02</span>
-          <span class="chip" style="background:#6B3E73"></span>
-          <span class="name">Mode & Accessoires</span>
-          <span class="desc">Vêtements, chaussures, casquettes & sacs</span>
-          <span class="arrow">→</span>
-        </div>
-        <div class="row" onclick="filterCategory('Maison & Déco')">
-          <span class="num">03</span>
-          <span class="chip" style="background:#8A7A2E"></span>
-          <span class="name">Maison & Déco</span>
-          <span class="desc">Éclairage nomade, rangement & art de la table</span>
-          <span class="arrow">→</span>
-        </div>
-        <div class="row" onclick="filterCategory('Beauté')">
-          <span class="num">04</span>
-          <span class="chip" style="background:#2E4E93"></span>
-          <span class="name">Beauté & Bien-être</span>
-          <span class="desc">Soins du visage, cosmétiques & parfums</span>
-          <span class="arrow">→</span>
-        </div>
-        <div class="row" onclick="filterCategory('Sport')">
-          <span class="num">05</span>
-          <span class="chip" style="background:#3D6B45"></span>
-          <span class="name">Sport & Plein air</span>
-          <span class="desc">Équipements fitness, sacs & accessoires outdoor</span>
-          <span class="arrow">→</span>
-        </div>
       </div>
     </div>
   </section>
@@ -329,19 +235,9 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   <section class="products-section" id="nouveautes">
     <div class="wrap">
       <div class="head">
-        <span class="eyebrow">Catalogue Produits</span>
-        <h2>Les produits du moment</h2>
-        <p>Prix affichés en Dirhams Marocains (MAD / DH). Tous nos produits sont sous garantie.</p>
-      </div>
-
-      <!-- Filter Tabs -->
-      <div class="cat-filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">Tous les produits</button>
-        <button class="tab-btn" onclick="filterCategory('Électronique', this)">Électronique</button>
-        <button class="tab-btn" onclick="filterCategory('Mode', this)">Mode</button>
-        <button class="tab-btn" onclick="filterCategory('Maison & Déco', this)">Maison & Déco</button>
-        <button class="tab-btn" onclick="filterCategory('Beauté', this)">Beauté</button>
-        <button class="tab-btn" onclick="filterCategory('Sport', this)">Sport</button>
+        <span class="eyebrow">MR.SHOP.MA Catalogue</span>
+        <h2>Nos Produits Disponibles</h2>
+        <p>Commandez en 1-clic avec livraison gratuite à domicile partout au Maroc.</p>
       </div>
 
       <div class="grid" id="products"></div>
@@ -352,29 +248,29 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   <section id="avantages">
     <div class="wrap">
       <div class="head">
-        <span class="eyebrow">Pourquoi MR.SHOP</span>
-        <h2>Acheter l'esprit tranquille</h2>
+        <span class="eyebrow">Pourquoi Choisir MR.SHOP.MA</span>
+        <h2>Services & Engagements</h2>
       </div>
       <div class="trustgrid">
         <div class="trust">
           <span class="trust-icon">🚚</span>
-          <h3>Livraison Partout au Maroc</h3>
-          <p>Livraison rapide à domicile sur Casablanca, Rabat, Marrakech, Fès, Tanger et toutes les régions.</p>
+          <h3>Livraison Gratuite</h3>
+          <p>Expédition rapide 24h/48h sans frais supplémentaires dans toutes les villes du Maroc.</p>
         </div>
         <div class="trust">
           <span class="trust-icon">💵</span>
           <h3>Paiement à la Livraison</h3>
-          <p>Commandez en toute sécurité sur le site et ne payez qu'à la réception de votre colis.</p>
+          <p>Achetez en toute confiance. Vous ne payez que lorsque vous recevez et vérifiez votre produit.</p>
         </div>
         <div class="trust">
           <span class="trust-icon">📱</span>
-          <h3>Support WhatsApp Dedicated</h3>
-          <p>Une équipe à votre écoute au 0668579270 pour répondre à toutes vos questions instantanément.</p>
+          <h3>Commande WhatsApp 24/7</h3>
+          <p>Passez votre commande directement via WhatsApp au 0668579270 avec notre équipe dédiée.</p>
         </div>
         <div class="trust">
-          <span class="trust-icon">↩️</span>
-          <h3>Retours & Échanges Faciles</h3>
-          <p>Garantie satisfait ou échangé sous 7 jours après votre achat.</p>
+          <span class="trust-icon">⭐</span>
+          <h3>Qualité Garantie</h3>
+          <p>Des produits rigoureusement vérifiés pour vous assurer la meilleure qualité du marché.</p>
         </div>
       </div>
     </div>
@@ -383,11 +279,11 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   <!-- Newsletter -->
   <section style="padding: 0 22px 80px;">
     <div class="wrap news" style="padding: 60px 20px;">
-      <span class="eyebrow" style="color: var(--ink);">Offres Exclusives</span>
-      <h2>Restez Informé Avant Tout Le Monde</h2>
-      <p style="margin: 0; color: #333;">Inscrivez-vous pour recevoir nos promotions privées et ventes flash.</p>
+      <span class="eyebrow" style="color: var(--ink);">Restez Connecté</span>
+      <h2>Offres Exclusives MR.SHOP.MA</h2>
+      <p style="margin: 0; color: #333;">Inscrivez-vous pour être informé de nos nouvelles arrivées.</p>
       <form onsubmit="subscribe(event)">
-        <input id="email" type="email" required placeholder="Votre adresse e-mail...">
+        <input id="email" type="email" required placeholder="Votre adresse email...">
         <button type="submit">S'inscrire</button>
       </form>
     </div>
@@ -399,34 +295,30 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   <div class="wrap">
     <div class="footgrid">
       <div class="foot-brand">
-        <a class="logo" style="color: white;" href="#top">MR<b>.</b>SHOP</a>
-        <p>MR.SHOP Maroc — Votre destination shopping globale. Qualité garantie, prix imbattables et service client réactif.</p>
+        <a class="logo" style="color: white;" href="#top">MR.SHOP<b>.MA</b></a>
+        <p>The Best Quality of Product is Here — Votre boutique marocaine de confiance.</p>
       </div>
       <div>
-        <h4>Rayons</h4>
-        <a href="#nouveautes" onclick="filterCategory('Électronique')">Électronique</a>
-        <a href="#nouveautes" onclick="filterCategory('Mode')">Mode & Accessoires</a>
-        <a href="#nouveautes" onclick="filterCategory('Maison & Déco')">Maison & Déco</a>
-        <a href="#nouveautes" onclick="filterCategory('Beauté')">Beauté & Soins</a>
-      </div>
-      <div>
-        <h4>Aide & Infos</h4>
-        <a href="#avantages">Livraison Maroc</a>
-        <a href="#avantages">Politique de retour</a>
+        <h4>Lien Rapides</h4>
+        <a href="#nouveautes">Tous les produits</a>
+        <a href="#avantages">Livraison Gratuite</a>
         <a href="#avantages">Paiement Cash</a>
-        <a href="#avantages">FAQ</a>
       </div>
       <div>
-        <h4>Contact Direct</h4>
-        <a href="https://wa.me/212668579270" target="_blank">📱 WhatsApp: 06 68 57 92 70</a>
-        <a href="tel:0668579270">📞 Tél: 06 68 57 92 70</a>
-        <a href="mailto:contact@mrshop.ma">✉️ contact@mrshop.ma</a>
-        <p style="margin-top: 15px; font-size: 0.8rem;">Casablanca / Rabat, Maroc</p>
+        <h4>Service Client</h4>
+        <a href="https://wa.me/212668579270" target="_blank">WhatsApp : 06 68 57 92 70</a>
+        <a href="tel:0668579270">Tél : 06 68 57 92 70</a>
+        <p style="margin-top: 15px; font-size: 0.8rem;">Maroc</p>
+      </div>
+      <div>
+        <h4>Paiement</h4>
+        <p style="color: #25D366; font-weight: bold;">💵 Paiement à la Livraison (COD)</p>
+        <p style="font-size: 0.85rem;">Payez cash à la réception de votre commande.</p>
       </div>
     </div>
     <div class="bottom">
-      <span>© 2026 MR.SHOP Maroc. Tous droits réservés.</span>
-      <span>Mentions Légales · CGV · Protection des Données</span>
+      <span>© 2026 MR.SHOP.MA — Tous droits réservés.</span>
+      <span>Livraison Gratuite Maroc</span>
     </div>
   </div>
 </footer>
@@ -441,9 +333,9 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
     <div class="cart-list" id="cartItems"></div>
     <div class="summary">
       <div class="summary-row"><span>Sous-total</span><span id="subtotal">0 DH</span></div>
-      <div class="summary-row"><span>Livraison</span><span>30 DH (Gratuite dès 500 DH)</span></div>
+      <div class="summary-row"><span>Livraison</span><span style="color: #25D366; font-weight: bold;">GRATUITE</span></div>
       <div class="summary-row total"><span>Total</span><span id="total">0 DH</span></div>
-      <button class="checkout-btn" onclick="openCheckoutModal()">Commander (Formulaire)</button>
+      <button class="checkout-btn" onclick="openCheckoutModal()">Acheter / Valider la commande</button>
       <button class="wa-checkout-btn" onclick="checkoutWhatsApp()">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         Commander par WhatsApp
@@ -452,124 +344,95 @@ footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0
   </aside>
 </div>
 
-<!-- Order Modal -->
+<!-- TajerCOD Order Modal -->
 <div class="overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal" id="checkoutModal">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-      <h2 class="modal-title">Validation de la Commande</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h2 class="modal-title">Formulaire de Commande</h2>
       <button class="close-btn" onclick="closeModal()">×</button>
     </div>
     <form onsubmit="submitOrder(event)">
       <div class="form-group">
-        <label>Nom complet *</label>
-        <input type="text" id="custName" required placeholder="Ex: Mohamed Alami">
+        <label>Nom et Prénom *</label>
+        <input type="text" id="custName" required placeholder="Votre nom complet">
       </div>
       <div class="form-group">
         <label>Téléphone *</label>
-        <input type="tel" id="custPhone" required placeholder="Ex: 0612345678">
+        <input type="tel" id="custPhone" required placeholder="06XXXXXXXX">
       </div>
       <div class="form-group">
         <label>Ville *</label>
-        <select id="custCity" required>
-          <option value="">Sélectionnez votre ville</option>
-          <option value="Casablanca">Casablanca</option>
-          <option value="Rabat">Rabat</option>
-          <option value="Marrakech">Marrakech</option>
-          <option value="Tanger">Tanger</option>
-          <option value="Agadir">Agadir</option>
-          <option value="Fès">Fès</option>
-          <option value="Meknès">Meknès</option>
-          <option value="Oujda">Oujda</option>
-          <option value="Kénitra">Kénitra</option>
-          <option value="Autre">Autre ville...</option>
-        </select>
+        <input type="text" id="custCity" required placeholder="Ex: Casablanca, Rabat, Marrakech...">
       </div>
       <div class="form-group">
         <label>Adresse de livraison *</label>
-        <textarea id="custAddress" required rows="3" placeholder="Quartier, rue, numéro d'appartement..."></textarea>
+        <textarea id="custAddress" required rows="2" placeholder="Quartier, rue, numéro..."></textarea>
       </div>
-      <div style="background: var(--paper); padding: 12px; border-radius: 4px; margin-bottom: 20px; font-size: 0.88rem; border: 1px solid var(--line);">
-        💵 <b>Paiement :</b> Cash à la livraison lors de la réception du colis.
+      <div style="background: #eef9f2; padding: 12px; border-radius: 4px; margin-bottom: 18px; font-size: 0.9rem; border: 1px solid #b7e8c8; color: #155724;">
+        🚚 <b>Livraison :</b> GRATUITE partout au Maroc<br>
+        💵 <b>Paiement :</b> Cash à la livraison
       </div>
-      <button type="submit" class="checkout-btn" style="margin: 0;">Confirmer la Commande</button>
+      <button type="submit" class="checkout-btn" style="margin: 0; background: var(--brass);">Confirmer Ma Commande</button>
     </form>
   </div>
 </div>
 
-<!-- Search Overlay -->
-<div class="searchbox" id="searchBox">
-  <button class="close-btn" style="color:white; position:absolute; right:25px; top:25px;" onclick="closeSearch()">×</button>
-  <div class="search-container">
-    <input id="searchInput" placeholder="Rechercher un produit (ex: Écouteurs, Sneakers...)" oninput="searchProducts()">
-    <div class="searchresults" id="searchResults"></div>
-  </div>
-</div>
-
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/212668579270?text=Bonjour%20MR.SHOP,%20j%27ai%20une%20question." target="_blank" class="wa-float" aria-label="Contact WhatsApp">
-  <span class="wa-tooltip">Discuter sur WhatsApp</span>
+<a href="https://wa.me/212668579270?text=Bonjour%20MR.SHOP.MA,%20je%20souhaite%20commander." target="_blank" class="wa-float" aria-label="Contact WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 </a>
 
 <script>
 const WA_PHONE = "212668579270";
 
+/* ==============================================================
+  قائمة المنتجات (PRODUCTS ARRAY)
+  يمكنك تركها فارغة [] أو تعبئة المنتجات الخاصة بك في أي وقت!
+  ==============================================================
+*/
 const products = [
-  { id: 1, name: "Écouteurs Pulse Air Pro", cat: "Électronique", price: 599, old: 799, rating: "★ 4.9 (128)", tag: "Top Vente", img: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80" },
-  { id: 2, name: "Sneakers Urban Trail Running", cat: "Mode", price: 749, old: 950, rating: "★ 4.8 (94)", tag: "Promo", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" },
-  { id: 3, name: "Lampe Nomade LED Minimalist", cat: "Maison & Déco", price: 299, old: 399, rating: "★ 4.7 (52)", tag: "Tendance", img: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" },
-  { id: 4, name: "Sérum Hydra Glow Anti-Âge", cat: "Beauté", price: 225, old: 290, rating: "★ 5.0 (210)", tag: "Nouveau", img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80" },
-  { id: 5, name: "Sac Sport Pro Water-Resistant", cat: "Sport", price: 349, old: 420, rating: "★ 4.8 (76)", tag: "Pratique", img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" },
-  { id: 6, name: "Montre Connectée AMOLED V2", cat: "Électronique", price: 899, old: 1199, rating: "★ 4.9 (185)", tag: "Best-Seller", img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" },
-  { id: 7, name: "Mug Thermique Inox 500ml", cat: "Maison & Déco", price: 159, old: 210, rating: "★ 4.6 (43)", tag: "Eco", img: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=800&q=80" },
-  { id: 8, name: "Casquette Essential Streetwear", cat: "Mode", price: 149, old: 190, rating: "★ 4.7 (88)", tag: "Style", img: "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80" }
+  // مثال لمنتج - يمكنك تغييره أو إضافة منتجات جديدة لاحقاً
+  { id: 1, name: "Écouteurs Pulse Air Pro", cat: "Électronique", price: 299, old: 450, tag: "Top Vente", img: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80" },
+  { id: 2, name: "Sneakers Urban Trail", cat: "Mode", price: 399, old: 550, tag: "Nouveau", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" }
 ];
 
 let cart = JSON.parse(localStorage.getItem("mrshop-cart") || "[]");
-let currentCategory = 'all';
 
-function renderProducts(list = products) {
+function renderProducts() {
   const container = document.getElementById("products");
-  if(!list.length) {
-    container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #888;">Aucun produit trouvé dans cette catégorie.</div>`;
+  
+  if (!products || products.length === 0) {
+    container.innerHTML = `
+      <div class="no-products">
+        <h3>Aucun produit pour le moment</h3>
+        <p>Notre catalogue sera mis à jour très prochainement sur MR.SHOP.MA !</p>
+      </div>
+    `;
     return;
   }
-  container.innerHTML = list.map(p => `
+
+  container.innerHTML = products.map(p => `
     <article class="card">
       <div class="media">
-        <span class="tag ${p.old ? 'discount' : ''}">${p.tag || 'Disponible'}</span>
+        <span class="tag">${p.tag || 'Disponible'}</span>
         <img loading="lazy" src="${p.img}" alt="${p.name}">
       </div>
       <div class="body">
         <span class="cat">${p.cat}</span>
         <div class="pname">${p.name}</div>
-        <div class="rating">${p.rating}</div>
         <div class="price-row">
           <div class="price">${p.price} DH</div>
           ${p.old ? `<div class="old-price">${p.old} DH</div>` : ''}
         </div>
         <div class="card-actions">
-          <button class="buy-btn" onclick="add(${p.id})">Ajouter au panier</button>
-          <button class="wa-direct-btn" onclick="orderSingleWhatsApp(${p.id})" title="Acheter direct sur WhatsApp">
+          <button class="buy-btn" onclick="add(${p.id})">Acheter</button>
+          <button class="wa-direct-btn" onclick="orderSingleWhatsApp(${p.id})" title="Commander sur WhatsApp">
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           </button>
         </div>
       </div>
     </article>
   `).join("");
-}
-
-function filterCategory(cat, btnElem = null) {
-  currentCategory = cat;
-  if(btnElem) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btnElem.classList.add('active');
-  }
-  if(cat === 'all') {
-    renderProducts(products);
-  } else {
-    renderProducts(products.filter(p => p.cat.toLowerCase().includes(cat.toLowerCase())));
-  }
 }
 
 function saveCart() {
@@ -594,25 +457,25 @@ function updateCartUI() {
   countEl.textContent = totalQty;
 
   if (!cart.length) {
-    cartItemsEl.innerHTML = '<div class="empty">Votre panier est vide pour le moment.</div>';
+    cartItemsEl.innerHTML = '<div style="text-align:center; padding: 50px 0; color:#777;">Votre panier est vide.</div>';
     if(subtotalEl) subtotalEl.textContent = "0 DH";
     if(totalEl) totalEl.textContent = "0 DH";
     return;
   }
 
-  let subtotal = 0;
+  let total = 0;
   cartItemsEl.innerHTML = cart.map(item => {
     let p = products.find(prod => prod.id === item.id);
     if(!p) return '';
     let itemTotal = p.price * item.qty;
-    subtotal += itemTotal;
+    total += itemTotal;
     return `
       <div class="cartitem">
         <img src="${p.img}" alt="${p.name}">
         <div>
-          <div class="cartitem-title">${p.name}</div>
-          <div class="cartitem-price">${p.price} DH</div>
-          <div class="qty">
+          <div style="font-weight:700;">${p.name}</div>
+          <div style="color:var(--brass); font-weight:bold;">${p.price} DH</div>
+          <div style="display:flex; align-items:center; gap:8px; margin-top:6px;">
             <button onclick="changeQty(${p.id}, -1)">−</button>
             <span>${item.qty}</span>
             <button onclick="changeQty(${p.id}, 1)">+</button>
@@ -623,11 +486,8 @@ function updateCartUI() {
     `;
   }).join("");
 
-  let shipping = subtotal >= 500 || subtotal === 0 ? 0 : 30;
-  let grandTotal = subtotal + shipping;
-
-  if(subtotalEl) subtotalEl.textContent = subtotal.toLocaleString("fr-FR") + " DH";
-  if(totalEl) totalEl.textContent = grandTotal.toLocaleString("fr-FR") + " DH";
+  if(subtotalEl) subtotalEl.textContent = total.toLocaleString("fr-FR") + " DH";
+  if(totalEl) totalEl.textContent = total.toLocaleString("fr-FR") + " DH";
 }
 
 function changeQty(id, delta) {
@@ -652,7 +512,6 @@ function closeCart() {
   document.getElementById("cartOverlay").classList.remove("show");
 }
 
-/* Order Methods */
 function openCheckoutModal() {
   if (!cart.length) return alert("Votre panier est vide.");
   closeCart();
@@ -668,9 +527,8 @@ function submitOrder(e) {
   const name = document.getElementById("custName").value;
   const phone = document.getElementById("custPhone").value;
   const city = document.getElementById("custCity").value;
-  const address = document.getElementById("custAddress").value;
 
-  alert(`Merci ${name} ! Votre commande a été enregistrée avec succès.\nNous vous contacterons sur le numéro ${phone} pour confirmation avant livraison à ${city}.`);
+  alert(`Merci ${name} !\nVotre commande a été enregistrée. Nous vous contacterons au ${phone} pour la livraison gratuite à ${city}.`);
   
   cart = [];
   saveCart();
@@ -680,7 +538,7 @@ function submitOrder(e) {
 function checkoutWhatsApp() {
   if (!cart.length) return alert("Votre panier est vide.");
   
-  let text = "Bonjour MR.SHOP Maroc, je souhaite passer la commande suivante :\n\n";
+  let text = "Bonjour MR.SHOP.MA, je souhaite passer la commande suivante (Livraison Gratuite) :\n\n";
   let total = 0;
   
   cart.forEach(item => {
@@ -692,13 +550,8 @@ function checkoutWhatsApp() {
     }
   });
 
-  let shipping = total >= 500 ? 0 : 30;
-  let finalTotal = total + shipping;
-
-  text += `\n*Sous-total :* ${total} DH`;
-  text += `\n*Frais de livraison :* ${shipping === 0 ? 'Gratuit' : '30 DH'}`;
-  text += `\n*Total à payer :* ${finalTotal} DH (Paiement à la livraison)\n\n`;
-  text += "Merci de me contacter pour la livraison !";
+  text += `\n*Total à payer :* ${total} DH (Paiement à la livraison)\n`;
+  text += "*Livraison :* GRATUITE\n\nMerci !";
 
   window.open(`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`, '_blank');
 }
@@ -706,50 +559,13 @@ function checkoutWhatsApp() {
 function orderSingleWhatsApp(id) {
   let p = products.find(prod => prod.id === id);
   if(!p) return;
-  let text = `Bonjour MR.SHOP, je souhaite commander directement :\n\n• *${p.name}*\nPrix: ${p.price} DH\n\nMerci de me donner les détails pour la livraison.`;
+  let text = `Bonjour MR.SHOP.MA, je souhaite commander :\n\n• *${p.name}*\nPrix: ${p.price} DH (Livraison Gratuite)\n\nMerci !`;
   window.open(`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`, '_blank');
-}
-
-/* Search Functions */
-function searchProducts() {
-  let query = document.getElementById("searchInput").value.toLowerCase();
-  let resultsContainer = document.getElementById("searchResults");
-  
-  if(!query.trim()) {
-    resultsContainer.innerHTML = "";
-    return;
-  }
-
-  let filtered = products.filter(p => (p.name + " " + p.cat).toLowerCase().includes(query));
-  
-  if(!filtered.length) {
-    resultsContainer.innerHTML = `<p style="color: #aaa; text-align: center; padding: 20px;">Aucun produit ne correspond à "${query}"</p>`;
-    return;
-  }
-
-  resultsContainer.innerHTML = filtered.map(p => `
-    <div class="search-item" onclick="selectSearchProduct(${p.id})">
-      <img src="${p.img}" alt="${p.name}">
-      <div>
-        <div style="font-weight: bold;">${p.name}</div>
-        <div style="color: var(--brass2); font-size: 0.85rem;">${p.cat} — <b>${p.price} DH</b></div>
-      </div>
-    </div>
-  `).join("");
-}
-
-function selectSearchProduct(id) {
-  closeSearch();
-  add(id);
-}
-
-function closeSearch() {
-  document.getElementById("searchBox").classList.remove("show");
 }
 
 function subscribe(e) {
   e.preventDefault();
-  alert("Merci pour votre inscription à la newsletter MR.SHOP !");
+  alert("Merci pour votre inscription !");
   e.target.reset();
 }
 
@@ -757,17 +573,11 @@ function closeNav() {
   document.getElementById("nav").classList.remove("open");
 }
 
-// Event Listeners
 document.getElementById("cartBtn").onclick = openCart;
-document.getElementById("searchBtn").onclick = () => {
-  document.getElementById("searchBox").classList.add("show");
-  document.getElementById("searchInput").focus();
-};
 document.getElementById("menuBtn").onclick = () => {
   document.getElementById("nav").classList.toggle("open");
 };
 
-// Init
 renderProducts();
 updateCartUI();
 </script>
