@@ -1,585 +1,997 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#15181D">
-<title>MR.SHOP.MA — The Best Quality of Product is Here</title>
-<meta name="description" content="MR.SHOP.MA — Produits de haute qualité au Maroc. Livraison Gratuite partout au Maroc et Paiement à la livraison.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --ink: #15181D;
-  --paper: #F8F9F5;
-  --brass: #B8863B;
-  --brass2: #D6AE6C;
-  --brass-light: rgba(184, 134, 59, 0.12);
-  --red: #DC3B2A;
-  --green: #25D366;
-  --green-dark: #1DA851;
-  --slate: #585D55;
-  --line: rgba(21,24,29,.12);
-  --card-bg: #FFFFFF;
-  --radius: 6px;
-  --maxw: 1200px;
-  --shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TajerCOD - منصة التجارة الإلكترونية والدفع عند الاستلام بالمغرب</title>
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'IBM Plex Sans', sans-serif; -webkit-font-smoothing: antialiased; }
-a { text-decoration: none; color: inherit; }
-button, input, select, textarea { font: inherit; }
-button { cursor: pointer; }
-img { display: block; width: 100%; height: auto; object-fit: cover; }
-.wrap { max-width: var(--maxw); margin: auto; padding: 0 22px; }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-h1, h2, h3, h4 { font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; line-height: 0.95; margin: 0; font-weight: 900; }
-.eyebrow { font: 600 .75rem 'IBM Plex Mono'; letter-spacing: .15em; text-transform: uppercase; color: var(--brass); display: inline-block; margin-bottom: 8px; }
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-/* Announcement Bar */
-.announce { background: var(--ink); color: var(--paper); padding: 11px 15px; text-align: center; font: 600 .82rem 'IBM Plex Mono'; position: relative; letter-spacing: 0.03em; }
-.announce b { color: #25D366; text-transform: uppercase; }
-.announce button { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: none; border: 0; color: white; font-size: 18px; opacity: 0.7; }
-.announce button:hover { opacity: 1; }
+    <!-- Cairo Arabic Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-/* Header */
-header { position: sticky; top: 0; z-index: 100; background: rgba(248, 249, 245, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-header .wrap { height: 76px; display: flex; align-items: center; justify-content: space-between; }
-.logo { font: 900 1.9rem 'Big Shoulders Display'; letter-spacing: -0.02em; }
-.logo b { color: var(--brass); }
-nav { display: flex; gap: 28px; font-size: .95rem; font-weight: 500; }
-nav a { transition: color 0.2s; }
-nav a:hover { color: var(--brass); }
-.actions { display: flex; align-items: center; gap: 10px; }
-.icon-btn { border: 1px solid var(--line); background: white; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; position: relative; transition: all 0.2s; }
-.icon-btn:hover { border-color: var(--ink); transform: translateY(-2px); }
-.icon-btn svg { width: 19px; height: 19px; fill: currentColor; }
-.badge { position: absolute; right: -2px; top: -2px; background: var(--red); color: #fff; border-radius: 10px; padding: 2px 6px; font: 700 10px 'IBM Plex Mono'; }
-.menu-btn { display: none; border: 0; background: none; padding: 5px; }
-.menu-btn span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; transition: 0.2s; }
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-/* Hero Section */
-.hero { padding: 75px 0 65px; background: radial-gradient(var(--brass-light) 1.2px, transparent 1.2px); background-size: 24px 24px; border-bottom: 1px solid var(--line); }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--line); padding: 6px 14px; border-radius: 20px; font: 600 0.78rem 'IBM Plex Mono'; margin-bottom: 20px; color: var(--brass); }
-.hero-badge .dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; display: inline-block; }
-.hero h1 { font-size: clamp(2.8rem, 7.5vw, 5.8rem); max-width: 950px; margin: 10px 0 20px; color: var(--ink); letter-spacing: -0.01em; }
-.hero h1 em { color: var(--brass); font-style: normal; position: relative; display: inline-block; }
-.hero h1 em::after { content: ''; position: absolute; bottom: 8px; left: 0; width: 100%; height: 8px; background: var(--brass-light); z-index: -1; }
-.lead { max-width: 640px; color: var(--slate); font-size: 1.15rem; line-height: 1.6; margin-bottom: 35px; }
-.ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn { border: 1px solid var(--ink); padding: 14px 26px; font-weight: 700; border-radius: var(--radius); transition: all 0.25s; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.95rem; }
-.btn.primary { background: var(--ink); color: var(--paper); }
-.btn.primary:hover { background: #2b303a; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
-.btn.wa-btn { background: var(--green); color: white; border-color: var(--green); }
-.btn.wa-btn:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(37,211,102,0.3); }
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
 
-/* Directory / Categories */
-section { padding: 80px 0; }
-.head { max-width: 650px; margin-bottom: 45px; }
-.head h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 8px 0 12px; }
-.head p { color: var(--slate); line-height: 1.6; margin: 0; font-size: 1.05rem; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
 
-/* Products Grid */
-.products-section { background: var(--ink); color: var(--paper); }
-.products-section .head p { color: #aaa; }
-.products-section .eyebrow { color: var(--brass2); }
-.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.card { border: 1px solid rgba(255,255,255,0.12); background: #1f232b; border-radius: var(--radius); overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
-.card:hover { transform: translateY(-6px); border-color: var(--brass2); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
-.media { aspect-ratio: 1/1; position: relative; overflow: hidden; background: #2a2f3a; }
-.media img { height: 100%; transition: transform 0.5s ease; }
-.card:hover .media img { transform: scale(1.08); }
-.tag { position: absolute; left: 12px; top: 12px; background: var(--red); color: white; padding: 4px 9px; font: 700 0.65rem 'IBM Plex Mono'; border-radius: 3px; z-index: 2; text-transform: uppercase; }
-.body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
-.cat { font: 500 .72rem 'IBM Plex Mono'; color: var(--brass2); text-transform: uppercase; letter-spacing: 0.05em; }
-.pname { font-weight: 700; font-size: 1.08rem; margin: 8px 0; color: white; line-height: 1.3; }
-.price-row { display: flex; align-items: baseline; gap: 10px; margin-top: auto; padding-top: 10px; }
-.price { font: 800 1.6rem 'Big Shoulders Display'; color: #25D366; }
-.old-price { font: 500 0.9rem 'IBM Plex Mono'; color: #888; text-decoration: line-through; }
-.card-actions { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 14px; }
-.buy-btn { border: 0; background: var(--brass2); color: var(--ink); padding: 12px; font-weight: 800; border-radius: var(--radius); transition: 0.2s; font-size: 0.88rem; text-transform: uppercase; }
-.buy-btn:hover { background: white; color: var(--ink); }
-.wa-direct-btn { background: rgba(37, 211, 102, 0.15); border: 1px solid var(--green); color: var(--green); padding: 0 12px; border-radius: var(--radius); display: grid; place-items: center; transition: 0.2s; }
-.wa-direct-btn:hover { background: var(--green); color: white; }
+        /* Glassmorphism Header */
+        .glass-header {
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
 
-/* Empty State */
-.no-products { grid-column: 1/-1; text-align: center; padding: 60px 20px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; color: #888; }
-.no-products h3 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
+        /* Hide Scrollbars in Pills list */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-/* Trust Features */
-.trustgrid { display: grid; grid-template-columns: repeat(4, 1fr); background: white; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-.trust { padding: 32px 24px; border-right: 1px solid var(--line); }
-.trust:last-child { border-right: 0; }
-.trust-icon { font-size: 2rem; margin-bottom: 12px; display: inline-block; }
-.trust h3 { font: 700 1.05rem 'IBM Plex Sans'; text-transform: none; margin: 0 0 8px; }
-.trust p { color: var(--slate); font-size: .88rem; line-height: 1.5; margin: 0; }
-
-/* Newsletter */
-.news { background: var(--brass); color: var(--ink); text-align: center; border-radius: var(--radius); }
-.news h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin: 10px 0; }
-.news form { display: flex; max-width: 520px; margin: 28px auto 0; gap: 8px; }
-.news input { flex: 1; padding: 15px 18px; border: 1px solid var(--ink); background: white; outline: none; border-radius: var(--radius); }
-.news button { padding: 15px 24px; background: var(--ink); color: white; border: 0; font-weight: 700; border-radius: var(--radius); transition: 0.2s; }
-
-/* Footer */
-footer { background: var(--ink); color: #aaa; padding: 70px 0 30px; font-size: 0.9rem; }
-.footgrid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footgrid h4 { color: var(--brass2); font: 600 .75rem 'IBM Plex Mono'; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
-.footgrid a { display: block; margin: 12px 0; transition: color 0.2s; }
-.footgrid a:hover { color: white; }
-.foot-brand p { margin-top: 15px; color: #888; line-height: 1.6; max-width: 280px; }
-.bottom { display: flex; justify-content: space-between; padding-top: 25px; font-size: .82rem; color: #777; }
-
-/* Drawer Cart & Modals */
-.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 150; display: none; opacity: 0; transition: opacity 0.3s; }
-.overlay.show { display: block; opacity: 1; }
-.drawer { position: absolute; right: 0; top: 0; height: 100%; width: min(460px, 100vw); background: var(--paper); padding: 28px; overflow-y: auto; display: flex; flex-direction: column; box-shadow: -10px 0 30px rgba(0,0,0,0.2); }
-.drawerhead { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
-.close-btn { border: 0; background: none; font-size: 28px; line-height: 1; color: var(--slate); }
-.cart-list { flex: 1; overflow-y: auto; margin: 15px 0; }
-.cartitem { display: grid; grid-template-columns: 75px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: center; }
-.cartitem img { height: 75px; border-radius: 4px; }
-.summary { background: white; padding: 18px; border-radius: var(--radius); border: 1px solid var(--line); margin-top: auto; }
-.summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: var(--slate); }
-.summary-row.total { font-size: 1.3rem; font-weight: 800; color: var(--ink); border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 10px; }
-.checkout-btn { width: 100%; padding: 16px; background: var(--ink); color: white; border: 0; font-weight: 800; border-radius: var(--radius); margin-top: 12px; font-size: 1rem; transition: 0.2s; }
-.wa-checkout-btn { width: 100%; padding: 14px; background: var(--green); color: white; border: 0; font-weight: 700; border-radius: var(--radius); margin-top: 8px; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
-
-/* TajerCOD Style Checkout Modal */
-.modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(520px, 94vw); background: white; padding: 30px; border-radius: 8px; z-index: 170; display: none; box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-height: 92vh; overflow-y: auto; }
-.modal.show { display: block; }
-.modal-title { font-size: 1.8rem; margin-bottom: 4px; }
-.form-group { margin-bottom: 14px; }
-.form-group label { display: block; font: 600 0.78rem 'IBM Plex Mono'; margin-bottom: 5px; text-transform: uppercase; color: var(--ink); }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); outline: none; background: var(--paper); font-size: 0.95rem; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--ink); background: white; }
-
-/* Floating WhatsApp Button */
-.wa-float { position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: var(--green); color: white; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 99; transition: all 0.3s; }
-.wa-float:hover { transform: scale(1.1); background: var(--green-dark); }
-.wa-float svg { width: 32px; height: 32px; fill: white; }
-
-@media (max-width: 992px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
-  .trustgrid { grid-template-columns: repeat(2, 1fr); }
-  .footgrid { grid-template-columns: 1fr 1fr; gap: 30px; }
-}
-
-@media (max-width: 768px) {
-  nav { position: fixed; top: 76px; left: 0; right: 0; background: var(--paper); padding: 30px; display: flex; flex-direction: column; transform: translateY(-120%); transition: 0.35s ease; border-bottom: 1px solid var(--line); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-  nav.open { transform: translateY(0); }
-  .menu-btn { display: block; }
-  .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .hero h1 { font-size: 3.2rem; }
-}
-
-@media (max-width: 520px) {
-  .grid { grid-template-columns: 1fr; }
-  .trustgrid, .footgrid { grid-template-columns: 1fr; }
-  .hero { padding: 45px 0; }
-}
-</style>
+        /* Card Hover Animations */
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.12);
+        }
+    </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
 
-<!-- Announcement Bar -->
-<div class="announce" id="announce">
-  🇲🇦 <b>LIVRAISON GRATUITE</b> PARTOUT AU MAROC — PAIEMENT À LA LIVRAISON (CASH ON DELIVERY)
-  <button onclick="this.parentElement.remove()" aria-label="Fermer">×</button>
-</div>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 glass-header text-white border-b border-slate-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3 cursor-pointer select-none" onclick="filterCategory('all')">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-brand-600 to-emerald-400 rounded-xl flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-brand-600/30">
+                        📦
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-emerald-400">TajerCOD</span>
+                            <span class="bg-brand-500/20 text-brand-400 text-xs px-2 py-0.5 rounded-full border border-brand-500/30 font-bold">v3.1</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 font-semibold">منصة التجارة الإلكترونية والدفع عند الاستلام بالمغرب</p>
+                    </div>
+                </div>
 
-<!-- Header -->
-<header>
-  <div class="wrap">
-    <a class="logo" href="#top">MR.SHOP<b>.MA</b></a>
-    <nav id="nav">
-      <a href="#nouveautes" onclick="closeNav()">Produits</a>
-      <a href="#avantages" onclick="closeNav()">Avantages</a>
-      <a href="#contact" onclick="closeNav()">Contact</a>
-    </nav>
-    <div class="actions">
-      <button class="icon-btn" id="cartBtn" aria-label="Panier">
-        <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-        <span class="badge" id="count">0</span>
-      </button>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
+                <!-- Desktop Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-md mx-8">
+                    <div class="relative w-full">
+                        <input type="text" id="searchInput" oninput="handleSearch()" placeholder="ابحث عن منتج، رمز REF، أو قسم..." 
+                            class="w-full bg-slate-800/80 text-sm text-white placeholder-slate-400 pl-4 pr-10 py-2.5 rounded-xl border border-slate-700 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                        <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
 
-<main id="top">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-badge">
-        <span class="dot"></span> MR.SHOP.MA — Official Store
-      </div>
-      <h1>THE BEST QUALITY OF PRODUCT IS HERE <em>LIVRAISON GRATUITE</em></h1>
-      <p class="lead">Découvrez notre sélection exclusive au Maroc. Produits d'excellente qualité, livraison rapide à domicile et paiement sécurisé cash à la réception.</p>
-      <div class="ctas">
-        <a class="btn primary" href="#nouveautes">Voir nos produits</a>
-        <a class="btn wa-btn" href="https://wa.me/212668579270?text=Bonjour%20MR.SHOP.MA,%20je%20souhaite%20commander." target="_blank">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleProfitCalcModal()" class="hidden sm:flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-gold-400 text-xs font-bold px-3.5 py-2.5 rounded-xl border border-gold-500/30 transition">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>حاسبة الأرباح</span>
+                    </button>
 
-  <!-- Products Section -->
-  <section class="products-section" id="nouveautes">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">MR.SHOP.MA Catalogue</span>
-        <h2>Nos Produits Disponibles</h2>
-        <p>Commandez en 1-clic avec livraison gratuite à domicile partout au Maroc.</p>
-      </div>
+                    <button onclick="openCartDrawer()" class="relative flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-extrabold px-4 py-2.5 rounded-xl transition shadow-lg shadow-brand-600/25">
+                        <i class="fa-solid fa-shopping-bag text-base"></i>
+                        <span class="hidden sm:inline">سلة الطلبات</span>
+                        <span id="cartCountBadge" class="bg-white text-brand-700 text-xs font-black rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
 
-      <div class="grid" id="products"></div>
-    </div>
-  </section>
-
-  <!-- Trust Features -->
-  <section id="avantages">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Pourquoi Choisir MR.SHOP.MA</span>
-        <h2>Services & Engagements</h2>
-      </div>
-      <div class="trustgrid">
-        <div class="trust">
-          <span class="trust-icon">🚚</span>
-          <h3>Livraison Gratuite</h3>
-          <p>Expédition rapide 24h/48h sans frais supplémentaires dans toutes les villes du Maroc.</p>
+            <!-- Mobile Search Bar -->
+            <div class="pb-4 md:hidden">
+                <div class="relative w-full">
+                    <input type="text" id="mobileSearchInput" oninput="handleSearchMobile()" placeholder="ابحث عن منتج..." 
+                        class="w-full bg-slate-800 text-sm text-white placeholder-slate-400 pl-4 pr-10 py-2 rounded-lg border border-slate-700 focus:outline-none focus:border-brand-500">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="trust">
-          <span class="trust-icon">💵</span>
-          <h3>Paiement à la Livraison</h3>
-          <p>Achetez en toute confiance. Vous ne payez que lorsque vous recevez et vérifiez votre produit.</p>
+    </header>
+
+    <!-- Hero Announcement Bar -->
+    <div class="bg-gradient-to-r from-slate-900 via-brand-950 to-slate-900 text-white py-3 border-b border-brand-800/30">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm font-semibold">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center bg-brand-500/20 text-brand-400 p-1.5 rounded-lg border border-brand-500/30">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </span>
+                <span>توصيل سريع لجميع المدن المغربية 🇲🇦 | <strong>الدفع عند الاستلام (COD)</strong></span>
+            </div>
+            <div class="flex items-center gap-6 text-slate-300">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-headset text-brand-400"></i> تأكيد الهواتف 100% بالدارجة</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-brand-400"></i> مخزون متوفر بكثرة</span>
+            </div>
         </div>
-        <div class="trust">
-          <span class="trust-icon">📱</span>
-          <h3>Commande WhatsApp 24/7</h3>
-          <p>Passez votre commande directement via WhatsApp au 0668579270 avec notre équipe dédiée.</p>
+    </div>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Category Filter Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar">
+            <button onclick="filterCategory('all')" id="btn-cat-all" 
+                class="cat-btn active bg-brand-600 text-white px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold whitespace-nowrap transition shadow-sm">
+                📌 جميع المنتجات (<span id="count-all">0</span>)
+            </button>
+            <button onclick="filterCategory('auto')" id="btn-cat-auto" 
+                class="cat-btn bg-white hover:bg-slate-100 text-slate-700 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition border border-slate-200">
+                🚗 إكسسوارات السيارات (<span id="count-auto">0</span>)
+            </button>
+            <button onclick="filterCategory('home')" id="btn-cat-home" 
+                class="cat-btn bg-white hover:bg-slate-100 text-slate-700 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition border border-slate-200">
+                🏡 المنزل والمعدات (<span id="count-home">0</span>)
+            </button>
+            <button onclick="filterCategory('lifestyle')" id="btn-cat-lifestyle" 
+                class="cat-btn bg-white hover:bg-slate-100 text-slate-700 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition border border-slate-200">
+                💄 الجمال واللايف ستايل (<span id="count-lifestyle">0</span>)
+            </button>
+            <button onclick="filterCategory('bundles')" id="btn-cat-bundles" 
+                class="cat-btn bg-gold-500 hover:bg-gold-600 text-white px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold whitespace-nowrap transition shadow-sm">
+                🔥 عروض الباكات المدمجة (<span id="count-bundles">0</span>)
+            </button>
         </div>
-        <div class="trust">
-          <span class="trust-icon">⭐</span>
-          <h3>Qualité Garantie</h3>
-          <p>Des produits rigoureusement vérifiés pour vous assurer la meilleure qualité du marché.</p>
+
+        <!-- Section Title Bar -->
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 id="sectionTitle" class="text-xl sm:text-2xl font-black text-slate-900">جميع المنتجات المتوفرة</h2>
+                <p id="sectionSubtitle" class="text-xs sm:text-sm text-slate-500 font-medium mt-1">اختر المنتجات وابدأ في تحقيق المبيعات مع خدمة التوصيل الموثوقة</p>
+            </div>
+            <div class="text-xs text-slate-600 font-bold bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200">
+                العملة: <strong class="text-brand-700">الدرهم المغربي (MAD / DH)</strong>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Newsletter -->
-  <section style="padding: 0 22px 80px;">
-    <div class="wrap news" style="padding: 60px 20px;">
-      <span class="eyebrow" style="color: var(--ink);">Restez Connecté</span>
-      <h2>Offres Exclusives MR.SHOP.MA</h2>
-      <p style="margin: 0; color: #333;">Inscrivez-vous pour être informé de nos nouvelles arrivées.</p>
-      <form onsubmit="subscribe(event)">
-        <input id="email" type="email" required placeholder="Votre adresse email...">
-        <button type="submit">S'inscrire</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer id="contact">
-  <div class="wrap">
-    <div class="footgrid">
-      <div class="foot-brand">
-        <a class="logo" style="color: white;" href="#top">MR.SHOP<b>.MA</b></a>
-        <p>The Best Quality of Product is Here — Votre boutique marocaine de confiance.</p>
-      </div>
-      <div>
-        <h4>Lien Rapides</h4>
-        <a href="#nouveautes">Tous les produits</a>
-        <a href="#avantages">Livraison Gratuite</a>
-        <a href="#avantages">Paiement Cash</a>
-      </div>
-      <div>
-        <h4>Service Client</h4>
-        <a href="https://wa.me/212668579270" target="_blank">WhatsApp : 06 68 57 92 70</a>
-        <a href="tel:0668579270">Tél : 06 68 57 92 70</a>
-        <p style="margin-top: 15px; font-size: 0.8rem;">Maroc</p>
-      </div>
-      <div>
-        <h4>Paiement</h4>
-        <p style="color: #25D366; font-weight: bold;">💵 Paiement à la Livraison (COD)</p>
-        <p style="font-size: 0.85rem;">Payez cash à la réception de votre commande.</p>
-      </div>
-    </div>
-    <div class="bottom">
-      <span>© 2026 MR.SHOP.MA — Tous droits réservés.</span>
-      <span>Livraison Gratuite Maroc</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Cart Drawer -->
-<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()">
-  <aside class="drawer">
-    <div class="drawerhead">
-      <h2>Mon Panier</h2>
-      <button class="close-btn" onclick="closeCart()">×</button>
-    </div>
-    <div class="cart-list" id="cartItems"></div>
-    <div class="summary">
-      <div class="summary-row"><span>Sous-total</span><span id="subtotal">0 DH</span></div>
-      <div class="summary-row"><span>Livraison</span><span style="color: #25D366; font-weight: bold;">GRATUITE</span></div>
-      <div class="summary-row total"><span>Total</span><span id="total">0 DH</span></div>
-      <button class="checkout-btn" onclick="openCheckoutModal()">Acheter / Valider la commande</button>
-      <button class="wa-checkout-btn" onclick="checkoutWhatsApp()">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        Commander par WhatsApp
-      </button>
-    </div>
-  </aside>
-</div>
-
-<!-- TajerCOD Order Modal -->
-<div class="overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
-  <div class="modal" id="checkoutModal">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-      <h2 class="modal-title">Formulaire de Commande</h2>
-      <button class="close-btn" onclick="closeModal()">×</button>
-    </div>
-    <form onsubmit="submitOrder(event)">
-      <div class="form-group">
-        <label>Nom et Prénom *</label>
-        <input type="text" id="custName" required placeholder="Votre nom complet">
-      </div>
-      <div class="form-group">
-        <label>Téléphone *</label>
-        <input type="tel" id="custPhone" required placeholder="06XXXXXXXX">
-      </div>
-      <div class="form-group">
-        <label>Ville *</label>
-        <input type="text" id="custCity" required placeholder="Ex: Casablanca, Rabat, Marrakech...">
-      </div>
-      <div class="form-group">
-        <label>Adresse de livraison *</label>
-        <textarea id="custAddress" required rows="2" placeholder="Quartier, rue, numéro..."></textarea>
-      </div>
-      <div style="background: #eef9f2; padding: 12px; border-radius: 4px; margin-bottom: 18px; font-size: 0.9rem; border: 1px solid #b7e8c8; color: #155724;">
-        🚚 <b>Livraison :</b> GRATUITE partout au Maroc<br>
-        💵 <b>Paiement :</b> Cash à la livraison
-      </div>
-      <button type="submit" class="checkout-btn" style="margin: 0; background: var(--brass);">Confirmer Ma Commande</button>
-    </form>
-  </div>
-</div>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/212668579270?text=Bonjour%20MR.SHOP.MA,%20je%20souhaite%20commander." target="_blank" class="wa-float" aria-label="Contact WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-</a>
-
-<script>
-const WA_PHONE = "212668579270";
-
-/* ==============================================================
-  قائمة المنتجات (PRODUCTS ARRAY)
-  يمكنك تركها فارغة [] أو تعبئة المنتجات الخاصة بك في أي وقت!
-  ==============================================================
-*/
-const products = [
-  // مثال لمنتج - يمكنك تغييره أو إضافة منتجات جديدة لاحقاً
-  { id: 1, name: "Écouteurs Pulse Air Pro", cat: "Électronique", price: 299, old: 450, tag: "Top Vente", img: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80" },
-  { id: 2, name: "Sneakers Urban Trail", cat: "Mode", price: 399, old: 550, tag: "Nouveau", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" }
-];
-
-let cart = JSON.parse(localStorage.getItem("mrshop-cart") || "[]");
-
-function renderProducts() {
-  const container = document.getElementById("products");
-  
-  if (!products || products.length === 0) {
-    container.innerHTML = `
-      <div class="no-products">
-        <h3>Aucun produit pour le moment</h3>
-        <p>Notre catalogue sera mis à jour très prochainement sur MR.SHOP.MA !</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = products.map(p => `
-    <article class="card">
-      <div class="media">
-        <span class="tag">${p.tag || 'Disponible'}</span>
-        <img loading="lazy" src="${p.img}" alt="${p.name}">
-      </div>
-      <div class="body">
-        <span class="cat">${p.cat}</span>
-        <div class="pname">${p.name}</div>
-        <div class="price-row">
-          <div class="price">${p.price} DH</div>
-          ${p.old ? `<div class="old-price">${p.old} DH</div>` : ''}
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamic Injection via JavaScript -->
         </div>
-        <div class="card-actions">
-          <button class="buy-btn" onclick="add(${p.id})">Acheter</button>
-          <button class="wa-direct-btn" onclick="orderSingleWhatsApp(${p.id})" title="Commander sur WhatsApp">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          </button>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200 my-8 shadow-sm">
+            <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-800 mb-1">لم نجد أي منتج يطابق البحث</h3>
+            <p class="text-sm text-slate-500 font-medium mb-4">جرب البحث بكلمات أخرى أو اختر قسماً مختلفاً</p>
+            <button onclick="filterCategory('all')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">عرض كل المنتجات</button>
         </div>
-      </div>
-    </article>
-  `).join("");
-}
 
-function saveCart() {
-  localStorage.setItem("mrshop-cart", JSON.stringify(cart));
-  updateCartUI();
-}
+    </main>
 
-function add(id) {
-  let item = cart.find(i => i.id === id);
-  item ? item.qty++ : cart.push({ id, qty: 1 });
-  saveCart();
-  openCart();
-}
-
-function updateCartUI() {
-  const countEl = document.getElementById("count");
-  const cartItemsEl = document.getElementById("cartItems");
-  const subtotalEl = document.getElementById("subtotal");
-  const totalEl = document.getElementById("total");
-  
-  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-  countEl.textContent = totalQty;
-
-  if (!cart.length) {
-    cartItemsEl.innerHTML = '<div style="text-align:center; padding: 50px 0; color:#777;">Votre panier est vide.</div>';
-    if(subtotalEl) subtotalEl.textContent = "0 DH";
-    if(totalEl) totalEl.textContent = "0 DH";
-    return;
-  }
-
-  let total = 0;
-  cartItemsEl.innerHTML = cart.map(item => {
-    let p = products.find(prod => prod.id === item.id);
-    if(!p) return '';
-    let itemTotal = p.price * item.qty;
-    total += itemTotal;
-    return `
-      <div class="cartitem">
-        <img src="${p.img}" alt="${p.name}">
-        <div>
-          <div style="font-weight:700;">${p.name}</div>
-          <div style="color:var(--brass); font-weight:bold;">${p.price} DH</div>
-          <div style="display:flex; align-items:center; gap:8px; margin-top:6px;">
-            <button onclick="changeQty(${p.id}, -1)">−</button>
-            <span>${item.qty}</span>
-            <button onclick="changeQty(${p.id}, 1)">+</button>
-          </div>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800 mt-16 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-white font-black text-lg mb-3">
+                        <span class="text-brand-400">📦 TajerCOD</span> المغرب
+                    </div>
+                    <p class="leading-relaxed text-slate-400 font-medium">
+                        المنصة الأولى للتجار والمسوقين الإلكترونيين بالمغرب. توفير المنتجات الأكثر طلباً، التأكيد الهاتفي للطلبات، والشحن السريع مع الدفع عند الاستلام.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">مميزات الخدمة</h4>
+                    <ul class="space-y-2 font-medium">
+                        <li><i class="fa-solid fa-check text-brand-400 ml-2"></i> تأكيد الطلبات عبر Call Center محترف بالدارجة</li>
+                        <li><i class="fa-solid fa-check text-brand-400 ml-2"></i> نسبة تسليم ممتازة في جميع أنحاء المغرب</li>
+                        <li><i class="fa-solid fa-check text-brand-400 ml-2"></i> إمكانية تتبع الشحنات تحيين يومي</li>
+                        <li><i class="fa-solid fa-check text-brand-400 ml-2"></i> صور وفيديوهات إعلانية جاهزة للمسوقين</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">المساعدة والدعم الفني</h4>
+                    <p class="mb-3 font-medium">هل لديك استفسار أو تريد كميات خاصة لمشروعك؟</p>
+                    <a href="https://wa.me/212600000000" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-4 py-2.5 rounded-xl text-xs transition shadow-lg shadow-emerald-600/20">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> تواصل مع الدعم عبر الواتساب
+                    </a>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right font-medium">
+                <p>© 2026 TajerCOD. جميع الحقوق محفوظة - النسخة 3.1</p>
+                <p>صُممت للتجار والمسوقين بالمملكة المغربية 🇲🇦</p>
+            </div>
         </div>
-        <button class="close-btn" style="font-size: 20px;" onclick="removeItem(${p.id})">×</button>
-      </div>
-    `;
-  }).join("");
+    </footer>
 
-  if(subtotalEl) subtotalEl.textContent = total.toLocaleString("fr-FR") + " DH";
-  if(totalEl) totalEl.textContent = total.toLocaleString("fr-FR") + " DH";
-}
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeProductModal()" class="absolute top-4 left-4 bg-slate-100 hover:bg-slate-200 text-slate-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold z-10 transition">
+                ✕
+            </button>
+            <div id="modalContent" class="p-6">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
 
-function changeQty(id, delta) {
-  let item = cart.find(i => i.id === id);
-  if (!item) return;
-  item.qty += delta;
-  if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
-  saveCart();
-}
+    <!-- Profit Calculator Modal -->
+    <div id="profitModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <button onclick="toggleProfitCalcModal()" class="absolute top-4 left-4 bg-slate-100 hover:bg-slate-200 text-slate-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition">
+                ✕
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 bg-gold-500/10 text-gold-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                    🧮
+                </div>
+                <div>
+                    <h3 class="text-lg font-extrabold text-slate-900">حاسبة أرباح المسوق</h3>
+                    <p class="text-xs text-slate-500 font-medium">احسب هامش ربحك التقديري لكل مبيعة</p>
+                </div>
+            </div>
 
-function removeItem(id) {
-  cart = cart.filter(i => i.id !== id);
-  saveCart();
-}
+            <div class="space-y-4 text-sm">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">ثمن شراء المنتج من TajerCOD (DH)</label>
+                    <input type="number" id="calcCostPrice" value="130" oninput="calculateProfit()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">ثمن البيع للزبون (Prix de Vente DH)</label>
+                    <input type="number" id="calcSellingPrice" value="249" oninput="calculateProfit()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">تكلفة الشحن والتأكيد التقديرية (DH)</label>
+                    <input type="number" id="calcShippingCost" value="35" oninput="calculateProfit()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">تكلفة الإعلان للطلبية الواحدة / CPA (DH)</label>
+                    <input type="number" id="calcAdCost" value="30" oninput="calculateProfit()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+                </div>
 
-function openCart() {
-  document.getElementById("cartOverlay").classList.add("show");
-  updateCartUI();
-}
+                <div class="bg-brand-50 border border-brand-200 rounded-xl p-4 mt-4">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-slate-700">صافي الربح التقديري للمبيعة:</span>
+                        <span id="calcNetProfit" class="text-xl font-black text-brand-700">+54 DH</span>
+                    </div>
+                    <p class="text-[11px] text-slate-500 font-medium">ملاحظة: هذه الحسبة تقريبية وتعتمد على ميزانيتك الإعلانية ونسبة التوصيل.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-function closeCart() {
-  document.getElementById("cartOverlay").classList.remove("show");
-}
+    <!-- Cart / Order Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex justify-end hidden">
+        <div class="bg-white w-full max-w-lg h-full flex flex-col shadow-2xl relative">
+            
+            <!-- Drawer Header -->
+            <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-cart-flatbed text-brand-400"></i>
+                    <h3 class="font-bold text-base">سلة طلبات العميل (تأكيد الطلب COD)</h3>
+                </div>
+                <button onclick="closeCartDrawer()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
+            </div>
 
-function openCheckoutModal() {
-  if (!cart.length) return alert("Votre panier est vide.");
-  closeCart();
-  document.getElementById("modalOverlay").classList.add("show");
-}
+            <!-- Drawer Body -->
+            <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                <div id="cartItemsList" class="space-y-3">
+                    <!-- Dynamic Cart Items -->
+                </div>
 
-function closeModal() {
-  document.getElementById("modalOverlay").classList.remove("show");
-}
+                <!-- Order Form -->
+                <div class="border-t border-slate-200 pt-4 mt-6">
+                    <h4 class="font-extrabold text-slate-800 text-sm mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-address-card text-brand-600"></i> معلومات زبون الطلبية
+                    </h4>
 
-function submitOrder(e) {
-  e.preventDefault();
-  const name = document.getElementById("custName").value;
-  const phone = document.getElementById("custPhone").value;
-  const city = document.getElementById("custCity").value;
+                    <form id="checkoutForm" onsubmit="submitOrder(event)" class="space-y-3 text-xs">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">الاسم الكامل للزبون *</label>
+                            <input type="text" required id="customerName" placeholder="مثال: محمد العلوي" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-brand-500 text-xs">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">رقم الهاتف المغربي *</label>
+                            <input type="tel" required id="customerPhone" placeholder="06XX-XXXXXX أو 07XX-XXXXXX" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-brand-500 text-xs">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">المدينة *</label>
+                            <select required id="customerCity" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-brand-500 text-xs">
+                                <option value="">اختر المدينة...</option>
+                                <option value="Casablanca">الدار البيضاء (Casablanca)</option>
+                                <option value="Rabat">الرباط (Rabat)</option>
+                                <option value="Kenitra">القنيطرة (Kenitra)</option>
+                                <option value="Marrakech">مراكش (Marrakech)</option>
+                                <option value="Tangier">طنجة (Tangier)</option>
+                                <option value="Fes">فاس (Fes)</option>
+                                <option value="Agadir">أكادير (Agadir)</option>
+                                <option value="Meknes">مكناس (Meknes)</option>
+                                <option value="Oujda">وجدة (Oujda)</option>
+                                <option value="Tetouan">تطوان (Tetouan)</option>
+                                <option value="Safi">آسفي (Safi)</option>
+                                <option value="El Jadida">الجديدة (El Jadida)</option>
+                                <option value="Nador">الناظور (Nador)</option>
+                                <option value="Laayoune">العيون (Laayoune)</option>
+                                <option value="Other">مدينة أخرى...</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">العنوان أو الحي</label>
+                            <input type="text" id="customerAddress" placeholder="مثال: حي السلام، شارع الملك الخامس" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:border-brand-500 text-xs">
+                        </div>
 
-  alert(`Merci ${name} !\nVotre commande a été enregistrée. Nous vous contacterons au ${phone} pour la livraison gratuite à ${city}.`);
-  
-  cart = [];
-  saveCart();
-  closeModal();
-}
+                        <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-800 text-[11px] font-medium leading-relaxed">
+                            ⚡ سيقوم مركز الاتصال (Call Center) الخاص بـ TajerCOD بالتواصل مع الزبون هاتفياً لـتأكيد الطلبية قبل شحنها.
+                        </div>
 
-function checkoutWhatsApp() {
-  if (!cart.length) return alert("Votre panier est vide.");
-  
-  let text = "Bonjour MR.SHOP.MA, je souhaite passer la commande suivante (Livraison Gratuite) :\n\n";
-  let total = 0;
-  
-  cart.forEach(item => {
-    let p = products.find(prod => prod.id === item.id);
-    if(p) {
-      let lineTotal = p.price * item.qty;
-      total += lineTotal;
-      text += `• ${p.name} (x${item.qty}) : ${lineTotal} DH\n`;
-    }
-  });
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-extrabold text-sm py-3 rounded-xl transition shadow-lg shadow-brand-600/30 flex items-center justify-center gap-2 mt-4">
+                            <i class="fa-solid fa-paper-plane"></i> إرسال الطلبية للتأكيد والشحن
+                        </button>
+                    </form>
+                </div>
+            </div>
 
-  text += `\n*Total à payer :* ${total} DH (Paiement à la livraison)\n`;
-  text += "*Livraison :* GRATUITE\n\nMerci !";
+            <!-- Drawer Footer Summary -->
+            <div class="p-4 bg-slate-50 border-t border-slate-200">
+                <div class="flex justify-between items-center text-sm font-bold text-slate-800">
+                    <span>مجموع الطلبية المقترح:</span>
+                    <span id="cartTotalAmount" class="text-brand-700 text-lg font-black">0 DH</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  window.open(`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`, '_blank');
-}
+    <!-- Order Success Modal -->
+    <div id="orderSuccessModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl relative">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-black">
+                ✓
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-2">تم إرسال الطلبية بنجاح!</h3>
+            <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium">
+                رقم الطلب الخاص بك: <strong id="successOrderRef" class="text-brand-700 font-bold inline-block">#TJR-000000</strong><br>
+                سيقوم مركز الاتصال الخاص بنا للتأكيد عبر الهاتف قريباً بالدارجة المغربية.
+            </p>
+            <button onclick="closeOrderSuccessModal()" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-extrabold py-2.5 rounded-xl text-xs transition">
+                موافق
+            </button>
+        </div>
+    </div>
 
-function orderSingleWhatsApp(id) {
-  let p = products.find(prod => prod.id === id);
-  if(!p) return;
-  let text = `Bonjour MR.SHOP.MA, je souhaite commander :\n\n• *${p.name}*\nPrix: ${p.price} DH (Livraison Gratuite)\n\nMerci !`;
-  window.open(`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`, '_blank');
-}
+    <!-- Toast Notification Widget -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-slate-700 font-bold text-xs flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none">
+        <span id="toastIcon">✨</span>
+        <span id="toastMessage">تنبيه</span>
+    </div>
 
-function subscribe(e) {
-  e.preventDefault();
-  alert("Merci pour votre inscription !");
-  e.target.reset();
-}
+    <!-- Script Data & Logic -->
+    <script>
+        // Catalog Products Data
+        const productsData = [
+            {
+                id: "AUTO-VAC-01",
+                ref: "AUTO-VAC-01",
+                title: "Aspirateur De Voiture - مكنسة كهربائية لاسلكية (3 في 1)",
+                category: "auto",
+                categoryName: "إكسسوارات السيارات",
+                price: 130,
+                oldPrice: 190,
+                badge: "الأكثر مبيعاً ⭐",
+                stock: "متوفر بكثرة ✅",
+                icon: "🚗",
+                imageUrl: "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "قوة الشفط: 6000 Pa محرك قوي عالي الفعالية",
+                    "التصميم: 3 في 1 (شفط ونفخ وتنظيف) قابلة للطي",
+                    "النظام: تشغيل لاسلكي حر بدون أسلاك مزعجة",
+                    "الفلتر: فلتر سميك قابل للغسل بالماء وإعادة الاستخدام",
+                    "الملحقات: فوهة 2في1، فرشاة لفتحات التكييف والمقاعد، رأس للزوايا"
+                ],
+                description: "مكنسة كهربائية صغيرة ومحمولة للسيارة والمنزل بتصميم 3 في 1 لاسلكي وقابل للطي يمنحك حرية الحركة لتنظيف أصعب الزوايا بدون أسلاك. تعمل ببطارية قابلة للشحن ومحرك يولد قوة شفط 6000 Pa لإزالة الأتربة وشعر الحيوانات وبقايا الطعام بفعالية عالية.",
+                adCopy: "🚨 تهنى من غبار وطوموبيلتك ديما نقية! 🚗✨\nالمكنسة اللاسلكية الذكية 3 في 1 للسيارة والمنزل بـ قوة شفط جبارة (6000Pa) وحجم مدمج كيطوى بسهولة!\n✅ لاسلكية وشحن USB\n✅ فلتر قابل للغسل بالماء\n✅ الملحقات كاملة معها\n💰 الثمن المميز: 130 درهم فقط! \n🚚 التوصيل لجميع مدن المغرب والدفع عند الاستلام."
+            },
+            {
+                id: "AUTO-HOLD-02",
+                ref: "AUTO-HOLD-02",
+                title: "Cup Phone - حامل هاتف السيارة الذكي التلسكوبي",
+                category: "auto",
+                categoryName: "إكسسوارات السيارات",
+                price: 150,
+                oldPrice: 220,
+                badge: "ثبات وأمان 📱",
+                stock: "متوفر بكثرة ✅",
+                icon: "📱",
+                imageUrl: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "نظام القفل: آلية Easy One Touch بضغطة واحدة بيد واحدة",
+                    "الذراع التلسكوبي: يمتد من 4 إلى 6.5 بوصة مع دوران 260 درجة",
+                    "الرأس الدوار: كرة دوارة 360 درجة للعرض الأفقي والعمودي",
+                    "قاعدة التثبيت: قاعدة شفط فائقة القوة للطابلو والزجاج",
+                    "التوافق: يلاءم جميع أحجام الهواتف الذكية والأغطية"
+                ],
+                description: "حامل الهواتف الأكثر ثباتاً وقوة داخل السيارة. يتميز بنظام القفل والتحرير السريع بلمسة واحدة، مع ذراع تلسكوبي قابل للتمديد والتدوير لتأمين رؤية واضحة ومريحة لشاشة الهاتف أثناء القيادة ونظام GPS وآمان تام حتى في الطرق الوعرة والمطبات.",
+                adCopy: "📱 سوق وانت مرتاح وأرقامك و GPS قدام عينيك بـ أمان تام!\nحامل الهاتف التلسكوبي الذكي للسيارة بالثبات الفائق والدوران 360 درجة.\n✅ تثبيت بلمسة واحدة Easy One Touch\n✅ قاعدة شفط قوية للزجاج أو الطابلو\n💰 الثمن: 150 درهم\n🚚 التوصيل سريع لجميع المدن والدفع عند الاستلام!"
+            },
+            {
+                id: "AUTO-MIR-03",
+                ref: "AUTO-MIR-03",
+                title: "Miroir d'angle mort - مرآة النقطة العمياء المحدبة (2 قطعتين)",
+                category: "auto",
+                categoryName: "إكسسوارات السيارات",
+                price: 180,
+                oldPrice: 250,
+                badge: "سلامة الطرقات 🔍",
+                stock: "متوفر بكثرة ✅",
+                icon: "🔎",
+                imageUrl: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "المادة: زجاج عالي الوضوح (HD Glass Lens) مقاوم للصدمات والخدش",
+                    "مستوى المقاومة: مقاومة كاملة للماء والأمطار بنسبة IP65",
+                    "الضبط: دوران 360 درجة لتحديد الزاوية المناسبة",
+                    "الأبعاد: 5.5 سم × 5.5 سم (تصميم دائري مدمج لجميع السيارات)",
+                    "التثبيت: شريط ذاتي اللصق قوي جداً لا يضر بالمرآة الأصلية"
+                ],
+                description: "تخلص من خطر النقاط العمياء أثناء القيادة وركن السيارة! مرايا محدبة زجاجية فائقة الوضوح بتصميم مقاوم للماء ودوران 360 درجة لتوسيع رؤيتك الخلفية وتسهيل عملية الرجوع للخلف والتجاوز على الطرقات بكل أمان.",
+                adCopy: "🔍 تهنى من الزوايا الميتة أثناء السياقة والدوبلاج!\nطقم مرايا النقطة العمياء HD زجاجية مقومة للماء مع دوران 360 درجة.\n✅ تركيب سهل بملصق قوي\n✅ حماية وسلامة لك ولعائلتك\n💰 الثمن: 180 درهم للطقم (2 قطع)\n🚚 الشحن متوفر لكاع مدن المغرب!"
+            },
+            {
+                id: "HOME-RACK-01",
+                ref: "HOME-RACK-01",
+                title: "Étagère De Douche - رف تخزين الحمام الزاوي (4 طبقات)",
+                category: "home",
+                categoryName: "أدوات المنزل والمعدات",
+                price: 240,
+                oldPrice: 350,
+                badge: "استغلال المساحات 🚿",
+                stock: "متوفر بكثرة ✅",
+                icon: "🚿",
+                imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "الارتفاع: عمود تلسكوبي قابل للتعديل (75 سم إلى 310 سم)",
+                    "الخامة: فولاذ مقاوم للصدأ (Stainless Steel 304)",
+                    "السعة: 4 أرفف واسعة مع تصريف المياه الذاتي",
+                    "قوة التحمل: يتحمل وزن إجمالي يصل إلى 16 كجم",
+                    "الملحقات: قضيب للمناشف وخطافات لتعليق اللوف وإسفنج الحمام"
+                ],
+                description: "الحل المثالي لتنظيم الحمام واستغلال الزوايا بدون الحاجة لثقب الجدران! رف تخزين عمودي مقاوم للصدأ بـ 4 طبقات واسعة وعمود تلسكوبي قابل للتعديل يناسب أي حمام، يمنحك ترتيباً أنيقاً للشامبو والصابون والمناشف بكل سهولة.",
+                adCopy: "🚿 نظم دوشك وحمامك بدون ما تتقب الحيط!\nرف الحمام الزاوي الفولاذي المقاوم للصدأ بـ 4 طبقات واسعة وعمود قابل للتعديل (حتى 3.1 متر).\n✅ هزاز حتى 16 كيلو\n✅ فتحات لتصريف الماء تلقائياً\n💰 الثمن: 240 درهم\n🚚 التوصيل حتال باب الدار والدفع عند الاستلام."
+            },
+            {
+                id: "HOME-ZAP-02",
+                ref: "HOME-ZAP-02",
+                title: "Lampe Anti-Moustique - صاعق البعوض الكهربائي الذكي USB",
+                category: "home",
+                categoryName: "أدوات المنزل والمعدات",
+                price: 200,
+                oldPrice: 280,
+                badge: "صيف بدون بعوض 🦟",
+                stock: "متوفر بكثرة ✅",
+                icon: "🦟",
+                imageUrl: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "تكنولوجيا الجذب: إضاءة بنفسجية جاذبة للبعوض والحشرات الطائرة",
+                    "الصعق: شبكة كهربائية فورية وصامتة بدون إصدار ضوضاء",
+                    "التغذية: تعمل عبر كابل USB (شاحن هاتف، باور بنك، أو كمبيوتر)",
+                    "الأمان: آمن 100% وخالي من المواد الكيميائية والمبيدات",
+                    "الاستخدام: غرف النوم، الصالون، المكتب، الرحلات والتخييم"
+                ],
+                description: "تخلص من البعوض والحشرات المزعجة نهائياً واستمتع بنوم هادئ وصحي! صاعق البعوض الكهربائي بضوء بنفسجي جاذب بدون أي روائح أو مواد كيميائية ضارة. يعمل عبر USB وبصوت صامت تماماً لحماية عائلتك في المنزل وفي الرحلات.",
+                adCopy: "🦟 نعس مرتاح بدون ناهس ولا ناموس يزعجك!\nصاعق البعوض الكهربائي الذكي بالضوء البنفسجي الجاذب.\n✅ بدون مواد كيميائية ولا روائح ضارة\n✅ يشتغل بـ USB وصامت تماماً\n💰 الثمن: 200 درهم\n🚚 التوصيل لجميع المدن والدفع عند الاستلام!"
+            },
+            {
+                id: "LIFE-BEAUTY-01",
+                ref: "LIFE-BEAUTY-01",
+                title: "Cosmetic Case LED - منظم مكياج ذكي مع مرآة مضيئة",
+                category: "lifestyle",
+                categoryName: "الجمال والتكنولوجيا",
+                price: 150,
+                oldPrice: 230,
+                badge: "الأكثر طلباً للنساء 💄",
+                stock: "متوفر بكثرة ✅",
+                icon: "💄",
+                imageUrl: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "المرآة: مرآة مكياج عالية الوضوح مزودة بحلقة إضاءة LED باللمس",
+                    "التخزين: صندوق مقسم يتسع لمستحضرات التجميل والعطور",
+                    "التصميم: أنيق وعصري ومزود بمقبض مريح للحمل والسفر",
+                    "الطاقة: بطارية قابلة للشحن عبر USB لإضاءة مستمرة"
+                ],
+                description: "صندوق مكياج أنيق 2 في 1 يجمع بين منظم التجميل المقسم ومرآة مضيئة بإضاءة LED تعمل باللمس. يتيح لك وضع المكياج بدقة متناهية وترتيب أدواتك في مكان واحد سواء في المنزل أو أثناء السفر.",
+                adCopy: "💄✨ لكل أُنثى كتعشق الترتيب والأناقة!\nمنظم المكياج الذكي 2في1 مع مرآة مضيئة بـ إضاءة LED تعمل باللمس ورأس قابل للشحن USB.\n✅ تصميم أنيق للسفر والبيت\n💰 الثمن الهبال: 150 درهم فقط!\n🚚 الشحن متوفر لجميع مدن المغرب."
+            },
+            {
+                id: "LIFE-FAN-02",
+                ref: "LIFE-FAN-02",
+                title: "Ventilateur De Cou Portable - مروحة الرقبة المحمولة اللاسلكية",
+                category: "lifestyle",
+                categoryName: "الجمال والتكنولوجيا",
+                price: 180,
+                oldPrice: 260,
+                badge: "انتعاش الصيف ❄️",
+                stock: "متوفر بكثرة ✅",
+                icon: "❄️",
+                imageUrl: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "التصميم: تصميم مريح بدون استخدام اليدين (Hands-Free) حول الرقبة",
+                    "المحرك: رأسين دوارين بتدفق هواء قوي وهادئ",
+                    "البطارية: بطارية ليثيوم مدمجة قابلة لإعادة الشحن عبر USB",
+                    "الحماية: غلاف آمن لحماية الشعر والأطفال، حزام مرن خفيف"
+                ],
+                description: "استمتع بالانتعاش والنسيم البارد في أوقات الحر الشديد والأنشطة الخارجية! مروحة الرقبة المحمولة بتصميم مبتكر يترك يديك حرتين مع رأسين دوارين وتدفق هواء هادئ وبطارية قابلة للشحن بالـ USB.",
+                adCopy: "❄️ برد على راسك فين ما مشيتي فالصيف والحرارة!\nمروحة الرقبة المحمولة اللاسلكية بدون يدين.\n✅ خفيفة الوزن وبطارية تدوم طويلاً\n✅ رأسين للتهوية وقابلة للشحن بـ USB\n💰 الثمن: 180 درهم\n🚚 التوصيل لجميع المدن والدفع عند الاستلام."
+            },
+            {
+                id: "BUNDLE-AUTO",
+                ref: "PACK-AUTO-399",
+                title: "باك السيارة الشامل 3 في 1 (Pack Auto Complete)",
+                category: "bundles",
+                categoryName: "العروض والباكات",
+                price: 399,
+                oldPrice: 460,
+                badge: "وفر 61 DH 🔥",
+                stock: "عرض محدود ⚡",
+                icon: "🎁",
+                imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "يتضمن 1: مكنسة كهربائية لاسلكية (130 DH)",
+                    "يتضمن 2: حامل هاتف السيارة التلسكوبي (150 DH)",
+                    "يتضمن 3: مرايا النقطة العمياء HD (180 DH)",
+                    "توفير واستغلال ممتازة لزيادة قيمة السلة AOV"
+                ],
+                description: "باك التوفير الأكبر للسيارات! احصل على المكنسة اللاسلكية 3 في 1 + حامل الهاتف التلسكوبي + طقم مرايا النقطة العمياء بسعر استثنائي 399 درهم فقط مع التوصيل المجاني.",
+                adCopy: "🎁 همزة خيالية لكل أصحاب السيارات بالمغرب!\nباك السيارة الشامل 3 في 1 بسعر 399 درهم فقط عوض 460 درهم:\n1️⃣ المكنسة اللاسلكية للسيارة 6000Pa\n2️⃣ حامل الهاتف الذكي التلسكوبي\n3️⃣ طقم مرايا النقطة العمياء 360°\n🚚 التوصيل مجاني والدفع عند الاستلام!"
+            },
+            {
+                id: "BUNDLE-HOME",
+                ref: "PACK-HOME-320",
+                title: "باك المنزل والراحة (Pack Maison & Confort)",
+                category: "bundles",
+                categoryName: "العروض والباكات",
+                price: 320,
+                oldPrice: 380,
+                badge: "وفر 60 DH 🔥",
+                stock: "عرض محدود ⚡",
+                icon: "🎁",
+                imageUrl: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
+                specs: [
+                    "يتضمن 1: صاعق البعوض الكهربائي الذكي USB (200 DH)",
+                    "يتضمن 2: مروحة الرقبة المحمولة اللاسلكية (180 DH)",
+                    "تجميعة مثالية لموسم الصيف والحرارة"
+                ],
+                description: "استمتع بالراحة والانتعاش في الصيف بدون ناموس وبدون حرارة! احصل على صاعق البعوض الكهربائي + مروحة الرقبة اللاسلكية بسعر خاص 320 درهم بدلاً من 380 درهم.",
+                adCopy: "🎁 باك الراحة والصيف 2 في 1 بسعر 320 درهم فقط!\n1️⃣ صاعق البعوض الكهربائي البنفسجي USB\n2️⃣ مروحة الرقبة المحمولة اللاسلكية\n🚚 التوصيل لجميع المدن والدفع عند الاستلام!"
+            }
+        ];
 
-function closeNav() {
-  document.getElementById("nav").classList.remove("open");
-}
+        // State Management
+        let currentFilter = 'all';
+        let searchQuery = '';
+        let cart = [];
 
-document.getElementById("cartBtn").onclick = openCart;
-document.getElementById("menuBtn").onclick = () => {
-  document.getElementById("nav").classList.toggle("open");
-};
+        // DOM Ready Init
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCategoryCounts();
+            renderProducts();
+        });
 
-renderProducts();
-updateCartUI();
-</script>
+        // Toast Notification System
+        function showToast(msg, icon = '✨') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+            if (!toast || !toastMsg) return;
+            
+            toastMsg.innerText = msg;
+            toastIcon.innerText = icon;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+
+        // Filter Logic
+        function filterCategory(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-sm', 'bg-gold-500', 'hover:bg-gold-600');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            const activeBtn = document.getElementById(`btn-cat-${cat}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-700');
+                if (cat === 'bundles') {
+                    activeBtn.classList.add('bg-gold-500', 'text-white', 'shadow-sm');
+                } else {
+                    activeBtn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+                }
+            }
+
+            // Update titles
+            const titleMap = {
+                'all': 'جميع المنتجات المتوفرة',
+                'auto': '🚗 قسم إكسسوارات ومستلزمات السيارات',
+                'home': '🏡 قسم أدوات المنزل والمعدات',
+                'lifestyle': '💄 قسم الجمال والتكنولوجيا وأسلوب الحياة',
+                'bundles': '🔥 عروض الباكات المدمجة (Bundles)'
+            };
+            document.getElementById('sectionTitle').innerText = titleMap[cat] || 'المنتجات';
+
+            renderProducts();
+        }
+
+        function handleSearch() {
+            searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+            renderProducts();
+        }
+
+        function handleSearchMobile() {
+            searchQuery = document.getElementById('mobileSearchInput').value.toLowerCase().trim();
+            renderProducts();
+        }
+
+        function updateCategoryCounts() {
+            document.getElementById('count-all').innerText = productsData.length;
+            document.getElementById('count-auto').innerText = productsData.filter(p => p.category === 'auto').length;
+            document.getElementById('count-home').innerText = productsData.filter(p => p.category === 'home').length;
+            document.getElementById('count-lifestyle').innerText = productsData.filter(p => p.category === 'lifestyle').length;
+            document.getElementById('count-bundles').innerText = productsData.filter(p => p.category === 'bundles').length;
+        }
+
+        // Render Product Cards
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const empty = document.getElementById('emptyState');
+            grid.innerHTML = '';
+
+            let filtered = productsData.filter(p => {
+                const matchesCat = currentFilter === 'all' || p.category === currentFilter;
+                const matchesSearch = searchQuery === '' || 
+                    p.title.toLowerCase().includes(searchQuery) || 
+                    p.ref.toLowerCase().includes(searchQuery) ||
+                    p.description.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.classList.add('hidden');
+                empty.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            empty.classList.add('hidden');
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "product-card bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm relative";
+                
+                card.innerHTML = `
+                    <div>
+                        <!-- Image & Badges -->
+                        <div class="relative h-48 bg-slate-100 overflow-hidden group cursor-pointer" onclick="openProductModal('${p.id}')">
+                            <img src="${p.imageUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">
+                                ${p.badge}
+                            </span>
+                            <span class="absolute top-3 left-3 bg-brand-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded">
+                                ${p.ref}
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-4">
+                            <div class="text-[11px] text-slate-400 font-bold mb-1">${p.categoryName}</div>
+                            <h3 class="font-extrabold text-slate-900 text-sm leading-snug line-clamp-2 cursor-pointer hover:text-brand-600 transition" onclick="openProductModal('${p.id}')">
+                                ${p.title}
+                            </h3>
+                            
+                            <!-- Price Block -->
+                            <div class="flex items-baseline gap-2 mt-3">
+                                <span class="text-xl font-black text-brand-700">${p.price} DH</span>
+                                <span class="text-xs text-slate-400 line-through">${p.oldPrice} DH</span>
+                            </div>
+
+                            <p class="text-[11px] text-emerald-600 font-semibold mt-1">
+                                <i class="fa-solid fa-circle-check text-[9px] ml-1"></i> ${p.stock}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Footer Buttons -->
+                    <div class="p-4 pt-0 space-y-2">
+                        <button onclick="addToCart('${p.id}')" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-extrabold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-cart-plus"></i> إضافة للسلة وتأكيد الطلب
+                        </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductModal('${p.id}')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold py-2 rounded-lg text-center transition">
+                                <i class="fa-solid fa-eye ml-1"></i> التفاصيل
+                            </button>
+                            <button onclick="copyAdCopy('${p.id}')" class="bg-amber-50 hover:bg-amber-100 text-amber-700 text-[11px] font-bold py-2 rounded-lg text-center transition border border-amber-200">
+                                <i class="fa-solid fa-copy ml-1"></i> نص الإعلان
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Product Modal Logic
+        function openProductModal(id) {
+            const p = productsData.find(item => item.id === id);
+            if (!p) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/2">
+                        <img src="${p.imageUrl}" alt="${p.title}" class="w-full h-64 md:h-80 object-cover rounded-xl border border-slate-200">
+                        <div class="mt-3 bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs">
+                            <span class="font-bold text-slate-700 block mb-1">المخزون وخدمة الشحن:</span>
+                            <div class="text-slate-600 font-medium">
+                                <div>• حالة المخزون: <strong class="text-emerald-600">${p.stock}</strong></div>
+                                <div>• التوصيل: لجميع مدن المغرب مع خدمة COD</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-100 text-brand-800 text-[11px] font-bold px-2.5 py-1 rounded-md">
+                                ${p.ref}
+                            </span>
+                            <h2 class="text-lg font-extrabold text-slate-900 mt-2 mb-2 leading-tight">${p.title}</h2>
+                            
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-2xl font-black text-brand-700">${p.price} DH</span>
+                                <span class="text-sm text-slate-400 line-through">${p.oldPrice} DH</span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4 font-medium">
+                                ${p.description}
+                            </p>
+
+                            <h4 class="text-xs font-bold text-slate-800 mb-2">المواصفات التقنية (Fiche Technique):</h4>
+                            <ul class="space-y-1.5 text-xs text-slate-600 mb-6 font-medium">
+                                ${p.specs.map(s => `<li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-brand-500 mt-0.5"></i> <span>${s}</span></li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="space-y-2">
+                            <button onclick="addToCart('${p.id}'); closeProductModal();" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-extrabold text-xs py-3 rounded-xl transition shadow-lg shadow-brand-600/30">
+                                طلب المنتج الآن (COD)
+                            </button>
+                            <button onclick="copyAdCopy('${p.id}')" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-copy"></i> نسخ نص الإعلان الجاهز للمسوقين
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // Cart Drawer Logic
+        function addToCart(id) {
+            const p = productsData.find(item => item.id === id);
+            if (!p) return;
+
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...p, qty: 1 });
+            }
+
+            updateCartUI();
+            openCartDrawer();
+            showToast(`تمت إضافة "${p.title.substring(0, 20)}..." للسلة!`, '🛒');
+        }
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cartItemsList');
+            const countBadge = document.getElementById('cartCountBadge');
+            const totalAmount = document.getElementById('cartTotalAmount');
+
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+
+            countBadge.innerText = totalQty;
+            totalAmount.innerText = `${totalPrice} DH`;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = `
+                    <div class="text-center py-10 text-slate-400">
+                        <i class="fa-solid fa-basket-shopping text-3xl mb-2"></i>
+                        <p class="text-xs font-bold">سلة الطلبات فارغة حالياً</p>
+                    </div>
+                `;
+                return;
+            }
+
+            cartList.innerHTML = cart.map(item => `
+                <div class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                    <div class="flex items-center gap-3">
+                        <img src="${item.imageUrl}" class="w-12 h-12 rounded-lg object-cover">
+                        <div>
+                            <h4 class="font-extrabold text-xs text-slate-800 line-clamp-1">${item.title}</h4>
+                            <span class="text-brand-700 font-extrabold text-xs">${item.price} DH</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty('${item.id}', -1)" class="w-6 h-6 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded text-xs font-bold">-</button>
+                        <span class="text-xs font-extrabold w-4 text-center">${item.qty}</span>
+                        <button onclick="changeQty('${item.id}', 1)" class="w-6 h-6 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded text-xs font-bold">+</button>
+                        <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 text-xs ml-2 font-bold">✕</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(i => i.id !== id);
+            updateCartUI();
+            showToast('تم إزالة المنتج من السلة', '🗑️');
+        }
+
+        function openCartDrawer() {
+            document.getElementById('cartDrawer').classList.remove('hidden');
+        }
+
+        function closeCartDrawer() {
+            document.getElementById('cartDrawer').classList.add('hidden');
+        }
+
+        // Submit Order Logic
+        function submitOrder(e) {
+            e.preventDefault();
+            if (cart.length === 0) {
+                showToast('الرجاء إضافة منتج واحد على الأقل للسلة قبل التمتيم.', '⚠️');
+                return;
+            }
+
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('customerPhone').value;
+            const city = document.getElementById('customerCity').value;
+            const orderRef = '#TJR-' + Math.floor(100000 + Math.random() * 900000);
+
+            document.getElementById('successOrderRef').innerText = orderRef;
+            document.getElementById('orderSuccessModal').classList.remove('hidden');
+
+            cart = [];
+            updateCartUI();
+            closeCartDrawer();
+            document.getElementById('checkoutForm').reset();
+        }
+
+        function closeOrderSuccessModal() {
+            document.getElementById('orderSuccessModal').classList.add('hidden');
+        }
+
+        // Seller Marketing Copy Tool (iframe compatible fallback)
+        function copyAdCopy(id) {
+            const p = productsData.find(item => item.id === id);
+            if (!p || !p.adCopy) return;
+
+            const tempInput = document.createElement('textarea');
+            tempInput.value = p.adCopy;
+            tempInput.style.position = 'fixed';
+            tempInput.style.opacity = '0';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+
+            try {
+                document.execCommand('copy');
+                showToast(`✅ تم نسخ نص الإعلان لمنتج (${p.ref}) بنجاح!`, '📋');
+            } catch (err) {
+                prompt("انسخ النص يدويًا:", p.adCopy);
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Profit Calculator Modal Toggle & Logic
+        function toggleProfitCalcModal() {
+            const modal = document.getElementById('profitModal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                calculateProfit();
+            }
+        }
+
+        function calculateProfit() {
+            const cost = parseFloat(document.getElementById('calcCostPrice').value) || 0;
+            const selling = parseFloat(document.getElementById('calcSellingPrice').value) || 0;
+            const shipping = parseFloat(document.getElementById('calcShippingCost').value) || 0;
+            const ad = parseFloat(document.getElementById('calcAdCost').value) || 0;
+
+            const profit = selling - (cost + shipping + ad);
+            const el = document.getElementById('calcNetProfit');
+
+            if (profit >= 0) {
+                el.className = "text-xl font-black text-brand-700";
+                el.innerText = `+${profit} DH`;
+            } else {
+                el.className = "text-xl font-black text-red-600";
+                el.innerText = `${profit} DH`;
+            }
+        }
+    </script>
 </body>
 </html>
